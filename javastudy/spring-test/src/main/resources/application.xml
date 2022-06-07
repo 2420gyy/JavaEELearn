@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.chen.pojo.User">
+        <property name="name" value="张三"/>
+        <property name="age" value="12"/>
+        <property name="email" value="24201913@qq.com"/>
+        <property name="teacher" ref="teacher"/>
+     </bean>
+
+    <bean id="teacher" class="com.chen.pojo.Teacher">
+        <property name="tname" value="李老师"/>
+     </bean>
+
+    <bean id="mydate" class="java.util.Date">
+        <property name="time" value="2222227777722"/>
+    </bean>
+
+</beans>

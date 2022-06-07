@@ -1,0 +1,28 @@
+person:
+#双引号不转译
+    lastname:张三
+    age: 18
+    boos: false
+    birth: 2077/12/12
+    maps: {k1: v1,k2: 12}
+    lists:
+      - lisi
+      - zhaoliu
+    dog:
+      name: 旺财
+      age: 2
+server:
+  port: 8081
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8082
+spring:
+  profiles: prod
+---
+server:
+  port: 8083
+spring:
+  profiles: dev

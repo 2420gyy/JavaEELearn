@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    dao专注于数据库，死的！-->
+    <import resource="spring-dao.xml"/>
+    <!--    这一段在springXXX最下面-->
+    <!--    实现类注入到spring 去spring调userMapper 再调他的方法-->
+    <bean id="userMapper" class="com.kuang.mapper.UserMapperImpl">
+        <property name="sqlSession" ref="sqlSession"/>
+    </bean>
+    <bean id="userMapper2" class="com.kuang.mapper.UserMapperImpl2">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>
+
+</beans>

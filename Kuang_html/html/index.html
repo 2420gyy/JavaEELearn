@@ -1,0 +1,283 @@
+<!--DOCTYPE : 告诉浏览器，使用的规范  -->
+<!DOCTYPE html>
+<html>
+<!-- 网页头部 -->
+<head>
+    <!-- meta 描述性标签，一般用来做seo -->
+    <meta charset="utf-8"/>
+    <mtea name="keyword" content="html教学"/>
+    <mtea name="description" content="狂神说"/>
+	<style>
+		body{
+			background-image:url(../resources/img/01-51-38-66-1ZF214334B06.jpg);
+			/* //图像不重复 */
+			background-repeat:no-repeat;
+			/* //居中显示 */
+			background-position: center;
+			/* //fixed背景图静止(前景可以动),scroll背景随内容滚动 */
+			background-attachment: fixed;
+			
+		}
+	</style>
+    <!-- 网页标题 -->
+    <title>狂神教学html</title>
+</head>
+<!-- 网页主题 -->
+<body>
+	
+	<a name="top">顶部</a>
+	
+<h1>标题标签（一级）</h1>
+<h2>二级标题</h2>
+
+<p>段落标签</p>
+<p>段落标签</p>
+
+换行标签<br>换行标签
+<br/>
+<br/>
+水平线标签
+<hr/>
+
+粗体 i love you <strong>i love you</strong><br/>
+斜体 i love you <em>i love you</em>
+<br/>
+特殊符号：<br/>
+空格： 空&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格<br>
+空 格（默认只有一个空格）
+&gt;
+&copy;
+<a name="mid">中部</a>
+<br>
+<!--
+推荐使用相对地址
+alt ：当图片显示不出来时显示的文字
+title : 鼠标悬停时的文字
+ -->
+<img src="../resources/img/20-41-30-80562260_p0.jpg"
+     alt="头像" title="鼠标悬停" width="400px" height="400px">
+
+<br>
+
+<!-- 链接标签
+ href:跳转到哪里
+ traget: 表示窗口在哪里打开
+	_blank 在新标签中打开
+	_self 在当前界面打开
+ -->
+<a href="test.html" target="_blank">点击我</a><br>
+<a href="https://www.baidu.com" target="_self">点击跳转到百度</a><br />
+
+<a href="test.html">
+	<img src="../resources/img/20-41-30-80562260_p0.jpg" title="跳转到测试界面" width="400px" height="400px">
+</a>
+<br />
+
+<!-- 锚链接 
+1.需要一个锚标记 name
+2.跳转到标记   #
+-->
+<a href="#top">回到顶部</a>
+<a href="#mid">回到中部</a>
+
+<!-- 页面跳转 -->
+<!-- <a href="index.html#mid">跳转到index</a> -->
+
+<!-- 功能性链接 -->
+<a href="mailto:2332323232@qq.com">点击联系我</a>
+<!-- qq链接 -->
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes">
+	<img border="0" src="http://wpa.qq.com/pa?p=2:232323:52" 
+alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+<br />
+<!-- 
+块元素 ： 无论内容多少，该元素独占一行 p h1-h6 
+ 
+行内元素 ： 内容撑开宽度，可以排在一行 a img 
+-->
+<!-- 列表 
+	ol 有序列表
+	ul 无序列表（默认无序）
+-->
+<li>列表</li>
+<ol>
+	<li>python</li>
+	<li>java</li>
+	<li>c/c++</li>
+</ol>
+<ul>
+	<li>python</li>
+	<li>java</li>
+	<li>c/c++</li>
+</ul>
+<!-- 自定义列表 
+dl : 标签
+dt : 列表名称
+dd ： 列表内容
+-->
+<dl>
+	<dt>学科</dt>
+	<dd>java</dd>
+	<dd>python</dd>
+	<dt>学分</dt>
+	<dd>120</dd>
+	<dd>120</dd>
+</dl>
+<!-- 表格table
+ tr 行
+ td 列
+ -->
+<table border="1px">
+	<tr>
+		<td>1-1</td>
+		<td>1-2</td>
+		<td>1-3</td>
+		<td>1-4</td>
+	</tr>
+	<tr>
+		<td>2-1</td>
+		<td>2-2</td>
+		<td>2-3</td>
+		<td>2-4</td>
+	</tr>
+</table><br />
+<!-- 
+colspan : 跨了几列
+rowspan : 跨了几行
+ -->
+<table border="1px">
+	<tr>
+		<td colspan="4">&nbsp;1-1</td>
+	</tr>
+	<tr>
+		<td rowspan="2">2-1 3-1</td>
+		<td>2-2</td>
+		<td>2-3</td>
+		<td>2-4</td>
+	</tr>
+	<tr>
+		<td>3-1</td>
+		<td>3-2</td>
+		<td>3-3</td>
+	</tr>
+</table>
+
+<table border="1px">
+	<tr>
+		<td colspan="3">学生成绩</td>
+	</tr>
+	<tr>
+		<td rowspan="2">狂神</td>
+		<td>语文</td>
+		<td>100</td>
+	</tr>
+	<tr>
+		<td>数学</td>
+		<td>100</td>
+	</tr>
+</table>
+<!-- 音频和视频
+ 播放控制 controls
+ 自动播放 autoplay
+ 谷歌需要设置静音 muted
+ -->
+<video src="../resources/video/风景1.mp4" 
+controls="controls" autoplay="autoplay" muted="muted"></video>
+<br />
+<audio src="../resources/audio/洪辰%20-%20Harley.mp3" controls="controls">
+	当前浏览器不支持audio
+</audio>
+<!--页面结构
+  nav ：导航类辅助内容
+  -->
+<header><h2>网页头部</h2></header>
+<section><h2>网页中部</h2></section>
+<footer><h2>网页脚部</h2></footer>
+<iframe src="test.html" width="400px" height="400px"></iframe>
+
+
+<iframe src="" name="hello" width="400px" height="400px"></iframe>
+<!-- 在内联框架中打开链接 -->
+<a href="test.html" target="hello">点击跳转</a>
+<!-- 表单 
+get : 不安全，高效，这里用post会有问题
+post
+value 默认值
+maxlength :限制输入字符最大长度
+size 文本框长度
+-->
+<form action="test.html" method="get">
+	<!-- 
+	 value : 默认值
+	 readonly ：只读
+	 disabled : 选择禁用
+	 hidden : 隐藏域，隐藏一些东西，用户看不到，但是还是可以提交（默认值），
+	 -->
+	 <p>
+		 <label for="mark">增强鼠标可用性</label>
+		 <input type="text" name="text" id="mark" />
+	 </p>
+	<p>名字：<input type="text" name="username" id="" value="" size="9" 
+	placeholder="请输入用户名" required="required"/></p>
+	<p>密码：<input type="password" name="password" id="" value="" /></p>
+	<!-- p是块级元素，因此在一行 
+	name ： 表示一组，由此可以单选
+	单选 radio
+	多谢 checkbox
+	默认选中 ： checked
+	-->
+	<p>性别：
+		<input type="radio" value="boy" name="sex" />男
+		<input type="radio" value="girl" name="sex" />女
+	</p>
+	<p>
+		<input type="submit" value="提交"/>
+		<input type="reset" value="重置"/>
+	</p>
+	<input type="image" src="../resources/img/20-41-30-80562260_p0.jpg" 
+	width="50px" height="50px"/>
+	<input type="file" name="files" id="" value="" />
+	<!-- 下拉框 ，列表框 -->
+	<p>国家：
+		<select>
+			<option value="china">中国</option>
+			<option value="us">美国</option>
+			<option value="rs" selected="selected">瑞士</option>
+		</select>
+	</p>
+	<!-- 文本域 -->
+	<p>反馈：
+		<textarea name="textarea" rows="5" cols="40"></textarea>
+	</p>
+	<!-- 邮件验证（必须包含@） -->
+	<p>邮箱：
+		<input type="email" name="email"/>
+	</p>
+	<!-- url验证
+	 数字验证（上下限，步长），
+	 -->
+	<p>链接：
+		<input type="url" name="url"/>
+	</p>
+	<p>商品数量：
+		<input type="number" name="num" max="100" min="0" step="1" />
+	</p>
+	<!-- 滑块 
+	step : 步长
+	-->
+	<p>音量滑块：
+		<input type="range" name="voice" max="100" min="0" step="2" value="99"/>
+	</p>
+	<!-- 搜索框 -->
+	<p>搜索：
+		<input type="search" name="search"/>
+	</p>
+	<!-- 表单验证
+	 提示信息 ： placeholder
+	 非空判断 ： required
+	 pattern : 正则表达式，（百度常用正则表达式）
+	 -->
+</form>
+
+</body>
+</html>

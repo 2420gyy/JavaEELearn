@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="js">js</p>
+		<div id="list">
+			<p id="se">javase</p>
+			<p id="ee">javaee</p>
+			<p id="me">javame</p>
+		</div>
+		<script type="text/javascript">
+			var js = document.getElementById('js');
+			var list = document.getElementById('list');
+			//追加 list.appendChild(js)
+			var newP = document.createElement('p');//创建新的标签
+			newP.id='newP';
+			newP.innerText = 'hello';
+			list.appendChild(newP);
+			
+			var myScript = document.createElement('script');
+			myScript.setAttribute('type','text/javascript');//这个方式是万能的
+			
+			var body = document.getElementsByTagName('body');
+			//body.style.backgroundColor = '#55aaff';
+			body.setAttribute('style','background-color: #0000FF');
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	<script>
+		function abs(x){
+			console.log(arguments.length);
+			if(typeof x != 'number'){
+				throw 'Not a Number'
+			}
+			if(x>0){
+				return x;
+			}else{
+				return -x;
+			}
+		}
+		//匿名函数
+		var abs2 = function(x){
+			if(x>0){
+				return x;
+			}else{
+				return -x;
+			}
+		}
+	</script>	
+		
+	</body>
+</html>

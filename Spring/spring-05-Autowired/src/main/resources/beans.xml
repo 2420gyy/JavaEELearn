@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--    开启注解支持-->
+    <context:component-scan base-package="com.kuang.pojo"></context:component-scan>
+    <context:annotation-config/>
+
+    <bean id="cat" class="com.kuang.pojo.Cat"/>
+    <bean id="dog" class="com.kuang.pojo.Dog"/>
+    <bean id="dog111" class="com.kuang.pojo.Dog"/>
+
+    <bean id="person" class="com.kuang.pojo.Person"/>
+
+</beans>
+
+        <!--<bean id="cat" class="com.kuang.pojo.Cat"/>-->
+
+        <!--<bean id="dog" class="com.kuang.pojo.Dog"/>-->
+
+        <!--        byName 会自动寻找，和自己对象set对应的值对应的id-->
+        <!--        byType会自动查找，和自己对象属性相同的bean 上边的class-->
+
+        <!--<bean id="person" class="com.kuang.pojo.Person" autowire="byName">-->
+        <!--<property name="name" value="陈晨"/>-->
+        <!--     <property name="cat" ref="cat"/>-->
+        <!--     <property name="dog" ref="dog"/>-->
+        <!--</bean>-->

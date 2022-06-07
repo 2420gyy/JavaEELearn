@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>当当网</title>
+		<script type="application/javascript">
+			function sub(){
+				var a1 = document.getElementById("amoubt").value;
+				var b1 = parseInt(a1);
+				if(b1>=1){
+					document.getElementById("amoubt").value=b1-1;
+				}
+				total_price();
+			}
+			function add(){
+				var a2 = document.getElementById("amoubt").value;
+				var b2 = parseInt(a2);
+				document.getElementById("amoubt").value=b2+1;
+				total_price();
+			}
+			function total_price(){
+				var a3 = document.getElementById("price1").value;
+				var b3 = document.getElementById("amoubt").value;
+				var c3 = parseFloat(a3)*parseFloat(b3);
+				document.getElementById("money1").value = c3;
+			}
+			function delete_goods(){
+				document.getElementById("first_goods").remove();
+			}
+		</script>
+	</head>
+	<body>
+		<div id="shop">
+			<div id="shop1">
+				<table border="2px">
+					<thead>
+						<tr>
+							<th>全选</th>
+							<th>商品信息</th>
+							<th>单价(元)</th>
+							<th>数量</th>
+							<th>金额(元)</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr id="first_goods">
+							<td><input type="radio"></td>
+							<td>白岩松：白说</td>
+							<td>￥<input type="text" name="price1" id="price1" value="21.9" size="3"/></td>
+							<td>
+									<input type="button" id="mins" value="-" onclick="sub()" />
+									<input type="text" id="amoubt" size="3" value="1"/>
+									<input type="button" id="plus" value="+" onclick="add()" />
+							</td>
+							<td>￥<input type="text" name="total_price" id="money1" value="21.9" size="3"/></td>
+							<td>
+								<button onclick="delete_goods()">删除</button>
+							</td>
+						</tr>
+						<tr id="second_goods">
+							<td><input type="radio"></td>
+							<td>岛上书店</td>
+							<td>￥<input type="text" name="price1" id="price1" value="42.8" size="3"/></td>
+							<td>
+									<input type="button" id="mins" value="-" onclick="sub()" />
+									<input type="text" id="amoubt" size="3" value="1"/>
+									<input type="button" id="plus" value="+" onclick="add()" />
+							</td>
+							<td>￥<input type="text" name="total_price" id="money1" value="21.9" size="3"/></td>
+							<td>
+								<button onclick="delete_goods()">删除</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Kuang-Demo/Kuang-Demo.iml" filepath="$PROJECT_DIR$/Kuang-Demo/Kuang-Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LoginTest/LoginTest.iml" filepath="$PROJECT_DIR$/LoginTest/LoginTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-12/java-12.iml" filepath="$PROJECT_DIR$/java-12/java-12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-s-c/java-s-c.iml" filepath="$PROJECT_DIR$/java-s-c/java-s-c.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_web_study.iml" filepath="$PROJECT_DIR$/java_web_study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaweb-jsp/javaweb-jsp.iml" filepath="$PROJECT_DIR$/javaweb-jsp/javaweb-jsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-web/maven-web.iml" filepath="$PROJECT_DIR$/maven-web/maven-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis-01-jedis/redis-01-jedis.iml" filepath="$PROJECT_DIR$/redis-01-jedis/redis-01-jedis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis-02-springboot/redis-02-springboot.iml" filepath="$PROJECT_DIR$/redis-02-springboot/redis-02-springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/request/request.iml" filepath="$PROJECT_DIR$/request/request.iml" />
+      <module fileurl="file://$PROJECT_DIR$/response-03/response-03.iml" filepath="$PROJECT_DIR$/response-03/response-03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet-01/servlet-01.iml" filepath="$PROJECT_DIR$/servlet-01/servlet-01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet-02/servlet-02.iml" filepath="$PROJECT_DIR$/servlet-02/servlet-02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-my/spring-my.iml" filepath="$PROJECT_DIR$/spring-my/spring-my.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-test/spring-test.iml" filepath="$PROJECT_DIR$/spring-test/spring-test.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// function Student(name){
+			// 	this.name = name;
+			// }
+			// Student.prototype.hello = function(){
+			// 	alert('hello1');
+			// }
+			
+			//ES6之后的
+			class Student{
+				constructor(name) {
+				    this.name = name;
+				}
+				hello(){
+					alert("hello");
+				}
+			}
+			class youngStudent extends Student{
+				constructor(name,grade) {
+				    super(name);
+					this.grade=grade;
+				}
+				myGrade(){
+					alert("小学生")
+				}
+			}
+			var xiaoming = new Student("xiaoming");
+			var xiaohong = new youngStudent("xiaohong",23);
+			
+			
+			
+		</script>
+	</body>
+</html>

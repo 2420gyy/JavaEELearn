@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="HCJ-tencent:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/HCJ_tencent_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="HCJ-tencent-UI/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="HCJ-tencent-UI" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

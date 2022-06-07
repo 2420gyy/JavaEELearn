@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //编写一个js对象
+        var user = {
+            name: "奇拉",
+            age: 3,
+            sex: "男"
+        };
+
+        //将js对象转换为json对象（字符串）类似于字典？？
+        var json = JSON.stringify(user);
+        console.log(json);//在控制台输出
+        console.log(user);
+
+        //将json对象转换为js对象
+        var obj = JSON.parse(json);
+        console.log(obj);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

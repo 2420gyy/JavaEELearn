@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/java-s-c" />
+    <file type="web" url="file://$PROJECT_DIR$/javaweb-jsp" />
+    <file type="web" url="file://$PROJECT_DIR$/LoginTest" />
+    <file type="web" url="file://$PROJECT_DIR$/maven-web" />
+    <file type="web" url="file://$PROJECT_DIR$/request" />
+    <file type="web" url="file://$PROJECT_DIR$/response-03" />
+    <file type="web" url="file://$PROJECT_DIR$/servlet-01" />
+    <file type="web" url="file://$PROJECT_DIR$/servlet-02" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringMvc零配置创建和部署" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/maven-web/pom.xml" />
+        <option value="$PROJECT_DIR$/Kuang-Demo/pom.xml" />
+        <option value="$PROJECT_DIR$/servlet-01/pom.xml" />
+        <option value="$PROJECT_DIR$/servlet-02/pom.xml" />
+        <option value="$PROJECT_DIR$/response-03/pom.xml" />
+        <option value="$PROJECT_DIR$/request/pom.xml" />
+        <option value="$PROJECT_DIR$/java-s-c/pom.xml" />
+        <option value="$PROJECT_DIR$/javaweb-jsp/pom.xml" />
+        <option value="$PROJECT_DIR$/LoginTest/pom.xml" />
+        <option value="$PROJECT_DIR$/redis-01-jedis/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/redis-02-springboot/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-my/pom.xml" />
+        <option value="$PROJECT_DIR$/java-12/pom.xml" />
+        <option value="$PROJECT_DIR$/com.xxxx/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

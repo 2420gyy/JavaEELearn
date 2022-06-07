@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    id : bean的唯一表识符， 相当于对象名
+    class : bean的对象所对应的全限定名
+    name : 也是别名，可以同时取多个别名
+    -->
+    <bean id="userT" class="com.kuang.pojo.UserT" name="user222 user2333">
+        <constructor-arg name="name" value="xibukaiyuan"/>
+    </bean>
+
+
+    <bean id="user" class="com.kuang.pojo.User">
+        <!--        无参创建的-->
+        <!--        <property name="name" value="陈晨"/>-->
+
+        <!--         下标赋值-->
+        <constructor-arg index="0" value="狂神说java"/>
+        <constructor-arg index="1" value="23"/>
+    </bean>
+
+    <!--    不建议使用，有参且两个参数都是string，不好搞（多个标签按顺序？？）-->
+    <!--    P6三种构造器注入方式分别是为了适应不同的构造器重载方式而存在的，尤其是第二种按类型注入：
+    假如某类有多个构造器，变量都只有一个只是传入类型不同，那么此时为了区分重载就只能使用第二种按类型注入的方式。
+    各取所需，并不存在所谓不建议使用。-->
+    <bean id="user1" class="com.kuang.pojo.User">
+        <constructor-arg type="java.lang.String" value="秦疆"/>
+        <constructor-arg type="int" value="24"/>
+    </bean>
+
+    <!--    书上的，给类构造方法的参数注入值，spring通过构造器注入获取值，最终赋给spring创建的User对象-->
+    <!--    直接通过参数名设置-->
+    <bean id="user2" class="com.kuang.pojo.User">
+        <constructor-arg name="name" value="陈晨"/>
+        <constructor-arg name="age" value="20"/>
+    </bean>
+
+    <!--    别名，在测试文件中使用ta-->
+    <alias name="user" alias="usernew"/>
+
+
+</beans>

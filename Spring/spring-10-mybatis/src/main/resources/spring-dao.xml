@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- DataSource 使用spring的数据源替换Mybatis的配置 c3p0 dbcp druid
+    这里是spring提供的JDBC  org.springframework.jdbc
+    -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/mybatis?serverTimezone=GMT%2B8&amp;
+                                    use?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8"/>
+        <property name="username" value="root"/>
+        <property name="password" value="123456"/>
+    </bean>
+
+    <!--    SqlSessionFactory 需要一个 DataSource（数据源）。
+    这可以是任意的 DataSource，只需要和配置其它 Spring 数据库连接一样配置它就可以了。-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!--        绑定Mybatis配置文件 每次只改这个地方-可以不在这绑定，那在哪？？？现在就不要了-->
+        <!--        <property name="configLocation" value="classpath:mybatis-config.xml"/>-->
+        <!--        这句是mapper的注册-->
+        <property name="mapperLocations" value="classpath:com/kuang/mapper/*.xml"/>
+        <property name="typeAliases" value="com.kuang.pojo.User"/>
+    </bean>
+
+    <!--    使用官方第二个方法，这一步也可以不要,同时也不用注入到bean，理清楚这个注入的情况，复杂？！？！？-->
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <!--        通过构造方法注入，共有三种方法，这里SqlSessionTemplate相当于sqlSession crud操作-->
+        <!--        只能通过构造器注入，没有set方法-->
+        <constructor-arg index="0" ref="sqlSessionFactory"/>
+    </bean>
+    <!--    实现类注入到spring 去spring调userMapper 再调他的方法-->
+    <!--    <bean id="userMapper" class="com.kuang.mapper.UserMapperImpl">-->
+    <!--        <property name="sqlSession" ref="sqlSession"/>-->
+    <!--    </bean>-->
+</beans>

@@ -1,0 +1,90 @@
+:root{
+	/* 定义属性，然后使用css var()函数调用 */
+	--line-border-fill: blue;
+	--line-border-empty:#e0e0e0;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: #F6F6F6;
+	font-family: sans-serif;
+	display: flex;
+	/* 水平居中 */
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.container{
+	text-align: center;
+}
+.progress-container{
+	display: flex;
+	/* 很特殊的布局。。。。 */
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+	width: 350px;
+	position: relative;
+}
+.progress-container::before{
+	content: "";
+	background-color: var(--line-border-empty);
+	height: 4px;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	margin-top: -2px;
+	/* 在数字下层显示 */
+	z-index: -1;
+}
+.progress{
+	background-color: var(--line-border-fill);
+	/* 浮在元素上一层 */
+	position: absolute;
+	height: 4px;
+	top: 50%;
+	/* 效果同margin-top: -2px; */
+	transform: translateY(-50%);
+	width: 0%;
+	z-index: -1;
+}
+.circle{
+	background-color: #FFF9EC;
+	color: #999999;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid var(--line-border-empty);
+	
+}
+.circle.active{
+	border-color: var(--line-border-fill);
+}
+.btn{
+	background-color: var(--line-border-fill);
+	color: #fff;
+	border-radius: 5px;
+	padding: 8px 30px;
+	border: 0;
+	font-size: 14px;
+	margin: 5px;
+}
+.btn:active{
+	transform: scale(0.98);
+}
+/* 激活时 */
+.btn:focus{
+	outline: 0;
+	/* outline: 3px solid pink; */
+}
+
+.btn:disabled{
+	background-color: var(--line-border-empty);
+	cursor: not-allowed;
+}

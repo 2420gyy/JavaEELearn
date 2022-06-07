@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--二级缓存在整个namespace里面有用-->
+<!--如果当前会话关闭了，这个会话对应的一级缓存就没了；但是我们想要的是，会话关闭了，一级缓存中的数据被保存到二级缓存中；-->
+<!--在当前Mapper.xml中使用二级缓存-->
+
+<mapper namespace="com.kuang.dao.UserMapper">
+    <!--    官方文档，理解-->
+    <!--    把Pojo序列化！！！-->
+    <!--    <cache/>这样要加序列化-->
+    <!--    <cache  eviction="FIFO"-->
+    <!--            flushInterval="60000"-->
+    <!--            size="512"-->
+    <!--            readOnly="true"/>-->
+    <!--    自定义cache-->
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+    <!--    可以选择开启或关闭-->
+    <select id="quaryUsersById" resultType="user" useCache="true">
+        select * from mybatis.user where id = #{id}
+    </select>
+
+</mapper>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        'use strict';
+        var map = new Map([['tom', 100], ['jack', 90]]);//这里注意括号
+        var name = map.get('tom');
+        console.log(name);
+        map.delete('jack');
+        map.set('admin', 123456);
+        //Set 无序不重复集合
+        var set = new Set([3, 2, 2, 2]);
+        set.add(4);
+        console.log(set);
+        console.log(set.has(3));
+        //console.log('2' in set);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

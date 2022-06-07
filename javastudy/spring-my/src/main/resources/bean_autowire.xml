@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<!--引入外部属性文件<context:property-placeholder location="classpath:jdbc.properties"/>-->
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.chen.autowire"/>
+<!--    <bean id="dept2" class="com.chen.autowire.Dept2"/>-->
+<!--    使用注解自动装配,这个时候和下面还是有一点不一样的-->
+<!--     完全不一样，可以不要bean了，类上面全加注解-->
+
+<!--
+自动装配，自动给bean装配属性
+1. **Byname自动装配：byname会自动查找，和自己对象set对应的值对应的id**
+
+   **保证所有id唯一，并且和set注入的值一致**
+
+2. **Bytype自动装配：byType会自动查找，和自己对象属性相同的bean**
+
+   ==**保证所有的class唯一**==
+-->
+
+    <bean id="emp" class="com.chen.autowire.Emp" autowire="byName">
+<!--        <property name="dept" ref="dept"/>-->
+
+    </bean>
+    <bean id="dept" class="com.chen.autowire.Dept"/>
+
+
+
+
+</beans>

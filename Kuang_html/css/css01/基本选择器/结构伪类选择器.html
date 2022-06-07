@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* ： 这个就是伪类 */
+			/* ul的第一个子元素 */
+/* 			ul li:first-child{ 
+				background-color: #0000FF;
+			} */
+			/* ul的最后一个子元素 */
+/* 			ul>li+li+li{
+				background-color: #FF7F50;
+			} */
+			/* ul li:last-child{
+				background-color: aquamarine;
+			} */
+			/* 选中当前父级元素的第几个当前元素
+			 当有其他种类的标签时第一个不好用，按type的好选一些
+			 */
+			p:nth-child(1){
+				background-color: cadetblue;
+			}
+			p:nth-of-type(2){
+				background-color: chartreuse;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<h6>h6</h6>
+		<p>p1</p>
+		<p>p2</p>
+		<p>p3</p>
+		<ul>
+			<li>li1</li>
+			<li>li2</li>
+			<li>li3</li>
+		</ul>
+		<li>li4</li>
+	</body>
+</html>

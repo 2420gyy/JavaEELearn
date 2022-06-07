@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function bl(){
+				var x = 1;
+				x=x+1;
+			}
+			//x=x+2;//Uncaught ReferenceError: x is not defined 主动报错
+			//不同函数内变量不影响，匿名内部内也不影响
+			//内部函数可以使用外面的，反之不行
+			//函数查找变量，由内向外查找，就近原则
+			//定义变量都放到最前面
+			
+			//全局变量，定义在函数外面，这个时候会绑定到window上，
+			
+			//全局对象 window 不安全
+			var x = 'xxx';
+			alert(x);
+			window.alert(x);
+			//js只有一个全局作用域，任何变量（函数也是变量），
+			
+			//唯一全局变量 JQuery
+			var KuangApp = {};
+			KuangApp.name = "kuang,,";
+			KuangApp.add = function (a,b){
+				return a+b;
+			}//把代码方法到自己定义的唯一空间名字中，降低全局命名冲突的问题
+			
+
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="resources/layui/css/layui.css">
+    <script src="resources/layui/layui.js"></script>
+</head>
+<body>
+<input type="text" class="layui-input" id="test1">
+
+<script>
+    layui.use('laydate', function () {
+        //执行一个laydate实例
+        var laydate = layui.laydate;
+        laydate.render({//渲染（绘制）日历控件
+
+            elem: '#test1',//指定元素
+            type: 'date',//year month time
+            //range : true,//范围面板
+            range: '~',//这个包含默认的true 中间可以是任何字符
+            format: 'yyyy年MM月dd日',
+            value: '2018-08-18'
+
+        });
+
+    })
+    //可以测一下弹出层，各种样式，类型，，，，
+</script>
+<script>
+    layui.use(['layer'], function () {
+        var layer = layui.layer;//这里引入的是layui.js 所以必须指定一个
+        //layer.msg("hello world");
+
+        layer.alert("hello world");
+
+    })
+</script>
+
+</body>
+</html>

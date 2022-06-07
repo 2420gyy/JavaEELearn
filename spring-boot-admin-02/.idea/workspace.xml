@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0004798b-5571-4232-9199-e22f90c08ea2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="206" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="chapter01: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ssmbuild: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="mybatis-config" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\mybatis\Mybatis-study\repository" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="11" />
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectId" id="1ti4Ofi5Nlbn1KJEc9V6j5ZQl5W" />
+  <component name="ProjectViewState">
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.53103447" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.atgui.admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java EE learn\spring-boot-admin-02\src\main\resources" />
+      <recent name="E:\Java EE learn\spring-boot-admin-02\src\main\resources\templates\error" />
+      <recent name="E:\Java EE learn\spring-boot-admin-02\src\main\resources\templates\form" />
+      <recent name="E:\Java EE learn\spring-boot-admin-02\src\main\resources\templates" />
+      <recent name="E:\Java EE learn\spring-boot-admin-02\src\main\resources\templates\table" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AssertionsTest.testSimpleAssertions">
+    <configuration name="AssertionsTest.testAssertions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-admin-02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atgui.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atgui.admin" />
+      <option name="MAIN_CLASS_NAME" value="com.atgui.admin.AssertionsTest" />
+      <option name="METHOD_NAME" value="testAssertions" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AssertionsTest.testSimpleAssertions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-admin-02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atgui.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atgui.admin" />
+      <option name="MAIN_CLASS_NAME" value="com.atgui.admin.AssertionsTest" />
+      <option name="METHOD_NAME" value="testSimpleAssertions" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParameterizedTest1.parameterizedTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-admin-02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atgui.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atgui.admin" />
+      <option name="MAIN_CLASS_NAME" value="com.atgui.admin.ParameterizedTest1" />
+      <option name="METHOD_NAME" value="parameterizedTest1(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParameterizedTest1.testWithExplicitLocalMethodSource" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-admin-02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atgui.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atgui.admin" />
+      <option name="MAIN_CLASS_NAME" value="com.atgui.admin.ParameterizedTest1" />
+      <option name="METHOD_NAME" value="testWithExplicitLocalMethodSource(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAStackDemo$WhenNew$AfterPushing.isNotEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-admin-02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atgui.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atgui.admin" />
+      <option name="MAIN_CLASS_NAME" value="com.atgui.admin.TestAStackDemo$WhenNew$AfterPushing" />
+      <option name="METHOD_NAME" value="isNotEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootAdmin02Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-admin-02" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atgui.admin.SpringBootAdmin02Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AssertionsTest.testSimpleAssertions" />
+        <item itemvalue="JUnit.AssertionsTest.testAssertions" />
+        <item itemvalue="JUnit.ParameterizedTest1.testWithExplicitLocalMethodSource" />
+        <item itemvalue="JUnit.ParameterizedTest1.parameterizedTest1" />
+        <item itemvalue="JUnit.TestAStackDemo$WhenNew$AfterPushing.isNotEmpty" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0004798b-5571-4232-9199-e22f90c08ea2" name="Default Changelist" comment="" />
+      <created>1623238544928</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623238544928</updated>
+      <workItem from="1623238551587" duration="2195000" />
+      <workItem from="1623240774892" duration="9000" />
+      <workItem from="1623241804229" duration="44065000" />
+      <workItem from="1623554403337" duration="605000" />
+      <workItem from="1623557102838" duration="15609000" />
+      <workItem from="1623582141333" duration="46469000" />
+      <workItem from="1624021785216" duration="27708000" />
+      <workItem from="1624825258426" duration="68000" />
+      <workItem from="1624825439631" duration="129000" />
+      <workItem from="1628572099319" duration="31000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="74" key="#Inspections" timestamp="1623759507101">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1623759507101" />
+    <state x="361" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1623578165207">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1623578165207" />
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1623834766668">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1623834766668" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1624119066435">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1624119066435" />
+    <state x="401" y="340" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1624118974454">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="401" y="340" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1624118974454" />
+    <state x="553" y="300" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1624118976805">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="553" y="300" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1624118976805" />
+    <state x="311" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1623597685531">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="311" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1623597685531" />
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623242627770">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1623242627770" />
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1624517081890">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1624517081890" />
+    <state width="1493" height="237" key="GridCell.Tab.0.bottom" timestamp="1624779725191">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="237" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624779725191" />
+    <state width="1493" height="237" key="GridCell.Tab.0.center" timestamp="1624779725190">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="237" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1624779725190" />
+    <state width="1493" height="237" key="GridCell.Tab.0.left" timestamp="1624779725190">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="237" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1624779725190" />
+    <state width="1493" height="237" key="GridCell.Tab.0.right" timestamp="1624779725190">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="237" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1624779725190" />
+    <state width="1493" height="237" key="GridCell.Tab.1.bottom" timestamp="1624530822553">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="237" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624530822553" />
+    <state width="1493" height="237" key="GridCell.Tab.1.center" timestamp="1624530822553">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="237" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1624530822553" />
+    <state width="1493" height="237" key="GridCell.Tab.1.left" timestamp="1624530822553">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="237" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1624530822553" />
+    <state width="1493" height="237" key="GridCell.Tab.1.right" timestamp="1624530822553">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="237" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1624530822553" />
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1623292027695">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623292027695" />
+    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1623292027694">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1623292027694" />
+    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1623292027694">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1623292027694" />
+    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1623292027695">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1623292027695" />
+    <state width="212" height="477" key="HiddenNamespacesPopup" timestamp="1623578187041">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="212" height="477" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1623578187041" />
+    <state x="272" y="0" key="SettingsEditor" timestamp="1624118322235">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="272" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1624118322235" />
+    <state x="431" y="145" width="919" height="678" key="search.everywhere.popup" timestamp="1624119097182">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="919" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1624119097182" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/spring_boot_admin_02$SpringBootAdmin02Application.ic" NAME="SpringBootAdmin02Application Coverage Results" MODIFIED="1624336965091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

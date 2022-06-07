@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springmvc-02-hellomaven" />
+        <module name="springmvc-06-ajax" />
+        <module name="HCJ-shang-UI" />
+        <module name="springmvc-03-annotation" />
+        <module name="springmvc-01-servlet" />
+        <module name="springmvc-05-json" />
+        <module name="HCJ-tencent-UI" />
+        <module name="springmvc-02-hellomaventwice" />
+        <module name="springmvc-04-controller" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8" />
+  </component>
+</project>

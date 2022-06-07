@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        'use strict';
+        //定义了一个person对象有2个属性 键值对来描述
+        //键是字符串，值是任意对象
+        var person = {
+            name: "kkk",
+            age: "20"
+        }
+        //对象属性不存在 报 undefined
+        //使用 delete 删除对象属性
+        //动态的添加 person.haha = "haha"
+        //'age' in person
+        // hasOwnProperty() 对象里面是否有这个属性
+        var person1 = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        person1.firstName;//对象属性
+        console.log(person1["id"]);//第二种访问对象属性的方法
+        var fn = person1.fullname();//对象方法 不加括号就是属性值来存储
+        console.log(fn);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuang.dao.BlogMapper">
+
+    <insert id="addBlog" parameterType="blog">
+        insert into mybatis.blog (id, title, author, create_time, views)
+        values (#{id},#{title},#{author},#{createTime},#{views});
+    </insert>
+
+    <!--    将重用代码整合-->
+    <sql id="if-t-a">
+        <if test="title !=null ">
+            and title = #{title}
+        </if>
+        <if test="author != null">
+            and author = #{author}
+        </if>
+    </sql>
+
+
+    <!--    1=1 最好不要写，true或者官网的？？？state = ‘ACTIVE’-->
+    <select id="queryBlogIf" parameterType="map" resultType="blog">
+        select * from mybatis.blog
+        <where>
+            <include refid="if-t-a"></include>
+        </where>
+    </select>
+
+    <select id="queryBlogChoose" parameterType="map" resultType="blog">
+        select * from mybatis.blog
+        <where>
+            <!--choose 类似于java的switch语句，只选择一个case子句 -->
+            <choose>
+                <when test="title!= null">
+                    title = #{title}
+                </when>
+                <when test="author != null">
+                    and author = #{author}
+                </when>
+                <otherwise>
+                    and views = #{views}
+                </otherwise>
+            </choose>
+        </where>
+
+    </select>
+
+    <update id="updataBlog" parameterType="map">
+        update mybatis.blog
+        <set>
+            <if test="title != null">
+                title = #{title},
+            </if>
+            <if test="author != null">
+                author = #{author}
+            </if>
+        </set>
+        where id = #{id}
+        <!-- 本句等价于where，自定义功能实现where <trim prefix="where" prefixOverrides="AND |OR" ></trim>管道符前的空格是必要的-->
+    </update>
+
+    <!--
+        select * from mybatis.blog where 1=1 and (id=1 or id = 2 or id=3)
+
+        我们现在传递一个万能的map ， 这map中可以存在一个集合！
+-->
+    <select id="seBlogbyforeach" parameterType="map" resultType="blog">
+        select * from mybatis.blog
+        <where>
+            <foreach collection="ids" item="id"
+                     open="and (" separator="or" close=")">
+                id=#{id}
+            </foreach>
+        </where>
+    </select>
+
+</mapper>

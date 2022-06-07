@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单-文档</title>
+    <link rel="stylesheet" href="resources/layui/css/layui.css">
+    <script src="resources/layui/layui.js"></script>
+</head>
+<body>
+<form class="layui-form layui-form-pane" action="">
+    <!--    layui-form-pane 有边框的样式-->
+    <div class="layui-form-item">
+        <label class="layui-form-label">输入框</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">短输入框</label>
+        <div class="layui-input-inline">
+            <input type="text" name="username" lay-verify="required" placeholder="请输入" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">密码框</label>
+        <div class="layui-input-inline">
+            <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off"
+                   class="layui-input">
+        </div>
+        <div class="layui-form-mid layui-word-aux">辅助文字</div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">选择框</label>
+        <div class="layui-input-block">
+            <select name="city" lay-verify="" lay-ignore>
+                <!--                lay-ignore 可以忽略样式，使用系统自带的-->
+                <option value="010">北京</option>
+                <option value="021" disabled>上海（禁用效果）</option>
+                <option value="0571" selected>杭州</option>
+            </select>
+            <select name="quiz" lay-ignore>
+                <option value="">请选择</option>
+                <optgroup label="城市记忆">
+                    <option value="你工作的第一个城市">你工作的第一个城市？</option>
+                </optgroup>
+                <optgroup label="学生时代">
+                    <option value="你的工号">你的工号？</option>
+                    <option value="你最喜欢的老师">你最喜欢的老师？</option>
+                </optgroup>
+            </select>
+            <select name="city" lay-verify="" lay-search>
+                <!--                这里回车不可以选择？？？-->
+                <option value="">请选择(带搜索)</option>
+                <option value="010">layer</option>
+                <option value="021">form</option>
+                <option value="057">layim</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item" pane>
+        <label class="layui-form-label">复选框</label>
+        <div class="layui-input-block">
+            <input type="checkbox" name="like[write]" title="写作">
+            <input type="checkbox" name="like[read]" title="阅读" checked>
+            <input type="checkbox" name="like[dai]" title="发呆">
+            <!--            <div>原始风格：</div>-->
+            <p>原始风格：</p>
+            <input type="checkbox" name="" title="写作" lay-skin="primary" checked>
+            <input type="checkbox" name="" title="发呆" lay-skin="primary">
+            <input type="checkbox" name="" title="禁用" lay-skin="primary" disabled>
+        </div>
+    </div>
+    <div class="layui-form-item" pane>
+        <!--        不加pane会怪怪的-->
+        <label class="layui-form-label">开关</label>
+        <div class="layui-input-block">
+            <!--            就是复选框的变种-->
+            <input type="checkbox" name="xxx" lay-skin="switch">
+            <input type="checkbox" name="yyy" lay-skin="switch" lay-text="ON|OFF" checked>
+            <input type="checkbox" name="zzz" lay-skin="switch" lay-text="开启|关闭">
+            <input type="checkbox" name="aaa" lay-skin="switch" disabled>
+
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">单选框</label>
+        <div class="layui-input-block">
+            <input type="radio" name="sex" value="男" title="男">
+            <input type="radio" name="sex" value="女" title="女" checked>
+        </div>
+    </div>
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">文本域</label>
+        <div class="layui-input-block">
+            <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    //Demo
+    layui.use('form', function () {
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+
+
+</body>
+</html>

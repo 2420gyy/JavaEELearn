@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="maven-web" />
+        <module name="spring-test" />
+        <module name="request" />
+        <module name="Kuang-Demo" />
+        <module name="java-12" />
+        <module name="redis-02-springboot" />
+        <module name="LoginTest" />
+        <module name="response-03" />
+        <module name="javaweb-jsp" />
+        <module name="SpringMvc零配置创建和部署" />
+        <module name="servlet-01" />
+        <module name="redis-01-jedis" />
+        <module name="java-s-c" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="java-12" target="11" />
+      <module name="java-s-c" target="1.8" />
+      <module name="javaweb-jsp" target="1.8" />
+      <module name="Kuang-Demo" target="1.8" />
+      <module name="LoginTest" target="1.8" />
+      <module name="maven-web" target="1.8" />
+      <module name="redis-01-jedis" target="1.8" />
+      <module name="redis-02-springboot" target="1.8" />
+      <module name="request" target="1.8" />
+      <module name="response-03" target="1.8" />
+      <module name="servlet-01" target="1.8" />
+      <module name="servlet-02" target="1.8" />
+      <module name="spring-my" target="1.8" />
+      <module name="spring-test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="redis-02-springboot" options="-parameters" />
+    </option>
+  </component>
+</project>

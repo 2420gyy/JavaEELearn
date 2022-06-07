@@ -1,0 +1,25 @@
+spring:
+  mvc:
+    view:
+      suffix: /
+      prefix: .html
+    hiddenmethod:
+      filter:
+        enabled: true #rest·ç¸ñ
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ssmbuild?characterEncoding=utf-8
+    username: root
+    password: root
+
+#  thymeleaf:
+#    cache: false
+logging:
+  level:
+    root: info
+    com.chen.dao: debug
+#server:
+#  servlet:
+#    context-path: /emp
+

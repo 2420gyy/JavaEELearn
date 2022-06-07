@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="java-s-c:war">
+    <output-path>$PROJECT_DIR$/java-s-c/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>java-s-c</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="java-s-c-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="java-s-c:war exploded" />
+    </root>
+  </artifact>
+</component>

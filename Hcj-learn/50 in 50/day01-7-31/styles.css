@@ -1,0 +1,65 @@
+*{
+	/* 内边距和外边距为0 */
+	margin: 0;
+	padding: 0;
+	/* 盒子的宽度包括内容本身和内边距及边框 */
+	box-sizing: border-box;
+}
+body{
+	font-family: sans-serif;
+	/*  */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* viewport 视口 */
+	height: 100vh;
+}
+.container{
+	/* 浮动作用... */
+	display: flex;
+	/* 宽度的90% */
+	width: 90vw;
+}
+.panel{
+	/* 填满元素但是不会改变比例 */
+	background-size: cover;
+	background-position: center;
+	/* 不重复？？ */
+	background-repeat: no-repeat;
+	height: 80vh;
+	border-radius: 50px;
+	color: white;
+	/* 鼠标呈小手状 */
+	cursor: pointer;
+	/* 每个div占一份 */
+	flex:1;
+	margin: 10px;
+	position: relative;
+	/* 过度动画 不要延时 */
+	transition: all 700ms ease-in 0s; 
+}
+.panel h3{
+	font-size: 24px;
+	/* 绝对定位是相对于上一个父元素 */
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	/* 点开显示 */
+	opacity: 0;
+}
+.panel.active{
+	flex:8;
+}
+.panel.active h3{
+	opacity: 1;
+	transition: opacity 0.3s ease-in 0.4s;
+}
+/* @media 规则在媒体查询中用于为不同的媒体类型/设备应用不同的样式。 */
+@media (max-width:480px) {
+	.container{
+		width: 100vw;
+	}
+	.panel:nth-of-type(4),.panel:nth-of-type(5){
+		display: none;
+	}
+}

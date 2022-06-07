@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 
+		 1.后代选择器：在某个元素后面
+		 2.子选择器 : 元素后面一代
+		 3.相邻兄弟选择器 : 相邻兄弟，下面的一个                      
+		 4.通用选择器
+		 -->
+		<style type="text/css">
+			/* p{
+				background-color: #00FFFF;
+			} */
+			/* 后代选择器 */
+			/* body p{
+				background-color: #FF7F50;
+			} */
+			/* 子选择器 */
+			/* body>p{
+				background-color: chartreuse;
+			} */
+			/* 相邻兄弟选择器 （同辈 对下一个）*/
+			/* .active + p{
+				background-color: black;
+			} */
+			/* 通用选择器 当前选中元素的向下所有兄弟元素*/
+			.active~p{
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<p>p0</p>
+		<p class="active">p1</p>
+		<p>p2</p>
+		<p>p3</p>
+		<ul>
+			<li>
+				<p>p4</p>
+			</li>
+			<li>
+				<p>p5</p>
+			</li>
+			<li>
+				<p>p6</p>
+			</li>
+		</ul>
+	</body>
+</html>

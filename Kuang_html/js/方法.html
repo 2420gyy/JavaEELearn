@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var kuang = {
+				name: 'qing',
+				birth: 2000,
+				age:function(){//传入参数
+					var now = new Date().getFullYear();
+					return now - this.birth;//this指向自己的属性
+				}
+			}
+			//属性 kuang.name
+			//方法 kuang.age()
+			
+			//拆开也可以
+			function getAge(){
+				var now = new Date().getFullYear();
+				return now - this.birth;//this指向自己的属性
+			}
+			var kuangs = {
+				name: 'qing',
+				birth: 2000,
+				age: getAge
+			}
+			//kuangs.age() 21
+			//getAge() NaN this指向调用他的那个对象
+			
+			//在js中控制this的指向
+			getAge.apply(kuangs,[]);//this指向了kuangs，参数为空
+		</script>
+	</body>
+</html>

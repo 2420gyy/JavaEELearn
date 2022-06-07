@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    function abs(x) {
+        if (x >= 0) {
+            return x;
+        } else {
+            return -x;
+        }
+    }
+
+    var abs2 = function (x) {
+        console.log(arguments[0]);//传递进来的是一个数组
+        if (x >= 0) {
+            return x;
+        } else {
+            return -x;
+        }
+    }
+
+    function aaa(a, b, ...rest) {
+        console.log(a);
+        console.log(b);
+        console.log(rest);
+    }
+
+
+</script>
+
+</body>
+</html>
