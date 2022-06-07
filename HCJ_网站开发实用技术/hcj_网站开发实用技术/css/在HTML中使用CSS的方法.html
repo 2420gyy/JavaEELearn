@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* 导入样式必须位于最前面 */
+			@import url("导入样式css.css");
+			p{
+				color: #8A2BE2;
+			}
+			
+		</style>
+		<link href="引入css.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body bgcolor="antiquewhite">
+		<p style="color: #9B8651; font-size: 16px;">1.行内样式，简单，为局部内容设置样式时非常方便</p>
+		
+		<p>2.嵌入样式，使用style标签，可以作用于整个文档</p>
+		
+		<p id="p3">3.链接样式，使用link标签</p>
+		
+		<p>导入样式和链接样式的区别：</p>
+		<ol>
+		<li>导入样式在html文件初始化时，将外部css文件导入到html文件中，类似于嵌入效果</li>
+		<li>链接样式是需要样式风格时才以链接方式引入</li>
+		</ol>
+		<h1>优先级：由高到低为 行内样式》嵌入样式》链接样式》导入样式</h1>
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

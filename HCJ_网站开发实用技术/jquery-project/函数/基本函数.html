@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		</style>
+		<script type="text/javascript" src="../jquery-3.5.1.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn111").click(function(){
+					var obj = $(":text:enabled");
+					obj.val("hello");
+				})
+				$("#btn222").click(function(){
+					var obj = $(":checkbox:checked");
+					// alert(obj[0].value);
+					//应该用循环
+					alert(obj.val());
+				})
+				$("#btn333").click(function(){
+					var obj = $("select>option:selected");
+					alert(obj.val());
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<p>文本框</p>
+		<input type="text" id="text111" value="text1"/><br />
+		<input type="text" id="text222" value="text2" disabled /><br />
+		<input type="text" id="text333" value="text3"/><br />
+		<input type="text" id="text444" value="text4" disabled="true" /><br />
+		<p>复选框</p>
+		<input type="checkbox" id="cb11" value="游泳" />游泳<br />
+		<input type="checkbox" id="cb22" value="健身" checked="checked"/>健身<br />
+		<input type="checkbox" id="cb33" value="跑步" />跑步<br />
+		<p>下拉选择框</p>
+		<select id="lang1">
+					 <option value="java">java语言</option>
+					 <option value="go" selected="selected">go语言</option>
+					 <option value="sql">sql语言</option>
+		</select><br /><br />
+		<button id="btn111">所有可用的text设值为hello</button><br />
+		<button id="btn222">显示被选中的复选框的值</button><br />
+		<button id="btn333">显示下拉列表选中的值</button>
+	</body>
+</html>

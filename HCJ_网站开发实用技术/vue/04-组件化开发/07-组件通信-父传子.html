@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+		<!-- 
+		 1.父组件里面要有数据a
+		 ！2.使用components：{'cpnf':cpn}将cpn注册为子组件
+		 3.模板template 设置id
+		 ！4.子组件cpn 绑定模板id，使用props设置值b
+		 5.在使用组件时使用v-bind:绑定b，b='a'!!!!!
+		 -->
+	<div id="app">
+		<cpnf v-bind:cmovies="movies" :cmessage="message"></cpnf>
+	</div>
+	
+	<template id="cpnt">
+		<div>
+			<li v-for="movie in cmovies">{{movie}}</li>
+			<p>{{cmessage}}</p>
+		</div>
+	</template>
+	
+	<script src="../js/vue.js"></script>
+	<script>
+		// 子组件
+		const cpn = {
+			template:'#cpnt',
+			// 1.数组
+			// props:['cmovies','cmessage']
+			props:{
+				// 对象写法，可以有类型限制
+				// 提供默认值
+				cmovies:Array,
+				
+				// cmessage:String
+				cmessage:{
+					type:String,
+					default:'父对象没有值',
+					// default(){
+					// 	return { }
+					// }
+					// 必须传值?????
+					required:false
+				}
+			}
+		}
+		const app = new Vue({
+			el:"#app",
+			data:{
+			message:"Hello,xiaoli",
+			movies:['海王','海贼王','火影忍者']
+			},
+			components:{
+				'cpnf':cpn
+			}
+		})
+	</script>
+	</body>
+</html>

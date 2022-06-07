@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		</style>
+		<script type="text/javascript" src="../jquery-3.5.1.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn11").click(function(){
+					$("#mydiv").append("<button>新的按钮</button>");
+				})
+				$("#btn11").on("click",function(){
+					$("#mydiv").append("<button>又一个新的按钮</button>");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<!-- 
+		书本P251 事件大全
+		jquery的事件都是js去掉on之后的
+		事件有两种：定义元素监听事件 $(选择器).监听事件名称(处理函数)
+				   更灵活的方式 $(选择器).on(一个或多个用空格隔开的事件，可选的函数)
+		 -->
+		<div id="mydiv">
+			需要增加一个button
+		</div>
+		<input type="button" id="btn11" value="按钮" />
+	</body>
+</html>

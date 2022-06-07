@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			[v-cloak] {
+			  display: none;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="app">
+		<!-- 赋值一次后不再改变，不再是响应式 -->
+		<h3 v-once>{{message}}</h3>
+		<h3>{{message}}</h3>
+		<!-- 解析对应的html -->
+		<h3 v-html="url"></h3>
+		<h3 v-text="message">这里会被覆盖掉</h3>
+		<!-- 不做解析，直接显示 -->
+		<h3 v-pre>{{message}}</h3>
+	</div>
+	<!-- 这个指令保持在元素上直到关联实例结束编译。和 CSS 规则如 [v-cloak] 
+	{ display: none }一起用时，这个指令可以隐藏未编译的 Mustache 标签
+	直到实例准备完毕。不会显示，直到编译结束。-->
+	<div v-cloak id="app">
+	  {{message}}
+	</div>
+		<script src="../js/vue.js"></script>
+		<script>
+			// 在vue解析之前，div中有一个属性v-cloak
+			//在解析后就没有了
+			const app = new Vue({
+				el:"#app",
+				data:{
+				message:'haha',
+				url:'<a href="http://www.baidu.com">百度一下</a>'
+				
+				}
+			})
+			// 延迟一秒
+			setTimeout(function(){
+				
+			},1000)
+		</script>
+	</body>
+</html>

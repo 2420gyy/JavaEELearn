@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="jquery-3.5.1.js"></script>
+		<script type="text/javascript">
+			function btClick(){
+			var btn = document.getElementById("button1");
+			alert("1="+btn.value)
+			var $bt =  $(btn);
+			alert("2="+$bt.val());
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" value="文本" id="txt1" /><br />
+		<input type="button" value="点击" id="button1" onclick="btClick()" />
+	</body>
+</html>

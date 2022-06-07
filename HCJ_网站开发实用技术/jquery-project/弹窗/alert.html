@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>pop window</title>
+<link rel="stylesheet" href="tankuang.css">
+<script src="../jquery-3.5.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var oBtn = $('#show');
+		var popWindow = $('.popWindow');
+		var close = $('.popWindow h3 span');
+		//浏览器可视区域的宽度
+		var browserWidth = $(window).width();
+ 
+		//浏览器可视区域的高度
+		var browserHeight = $(window).height();
+ 
+		//浏览器纵向滚动条距离上边界的值
+		var browserScrollTop = $(window).scrollTop();
+ 
+		//浏览器横向滚动条距离左边界的值
+		var browserScrollLeft = $(window).scrollLeft();
+ 
+		//弹出窗口的宽度,outerWidth设置为true计算时会把padding,border和margin计算进去
+		var popWindowWidth = popWindow.outerWidth(true);
+		//弹出窗口的高度
+		var popWindowHeight = popWindow.outerHeight(true);
+ 
+		//left的值＝浏览器可视区域的宽度／2－弹出窗口的宽度／2+浏览器横向滚动条距离左边界的值
+		var positionLeft = browserWidth / 2 - popWindowWidth / 2
+				+ browserScrollLeft;
+ 
+		//top的值＝浏览器可视区域的高度／2－弹出窗口的高度／2+浏览器纵向滚动条距离上边界的值
+		var positionTop = browserHeight / 2 - popWindowHeight / 2
+				+ browserScrollTop;
+		
+		var maskDiv ='<div class="maskDiv" ></div>';
+		//遮罩层的宽度
+		var masWidth = $(document).width();
+		var masHeight = $(document).height();
+		//当浏览器大小发生改变时计算改变弹出窗口的位置
+		$(window).resize(
+				function() {
+				if(popWindow.is(':visible')){//当popWindow是可见的时候设置变化
+					browserWidth = $(window).width();
+					browserHeight = $(window).height();
+					positionLeft = browserWidth / 2 - popWindowWidth / 2
+							+ browserScrollLeft;
+					positionTop = browserHeight / 2 - popWindowHeight / 2
+							+ browserScrollTop;					
+					//重新设置弹出窗的位置，使其位置随浏览器大小变化而变化
+					popWindow.css({
+						'left' : positionLeft + 'px',
+						'top' : positionTop + 'px'
+					});
+					masWidth = $(document).width();
+					masHeight = $(document).height();
+					//重新设置遮罩层宽高，使其宽高随浏览器大小变化而变化
+					$(".maskDiv").width(masWidth).height(masHeight);
+				}
+				});
+ 
+		//滚动滚动条时计算改变弹出窗口的位置
+		$(window).scroll(
+				function() {
+				if(popWindow.is(':visible')){
+				    browserScrollTop = $(window).scrollTop();
+					browserScrollLeft = $(window).scrollLeft();
+					positionLeft = browserWidth / 2 - popWindowWidth / 2
+							+ browserScrollLeft;
+					positionTop = browserHeight / 2 - popWindowHeight / 2
+							+ browserScrollTop;
+										//重新设置弹出层的位置，使其位置随着滚动条滚动改变
+					popWindow.css({
+						'left' : positionLeft + 'px',
+						'top' : positionTop + 'px'
+					});
+				}
+					
+				});
+ 		//当鼠标点击弹出按钮时触发
+		oBtn.click(function() {
+                        //设置弹出窗的位置
+			popWindow.show().animate({
+				'left' : positionLeft + 'px',
+				'top' : positionTop + 'px'
+			}, 500);
+			//页面增加遮罩层
+			$('body').append(maskDiv);
+			//设置遮罩层的宽高
+			$(".maskDiv").width(masWidth).height(masHeight);
+			//设置遮罩层的样式
+			$(".maskDiv").css({
+						'left' : '0px',
+						'top' :  '0px',
+						'z-index' : '1',
+						'position' : 'absolute',
+						'opacity' : '0.4',
+						'height' : masHeight + 'px',
+						'width' : masWidth + 'px',
+						'background-color' : 'black'
+					}); //也可以在css中定义
+			
+		});
+		//当鼠标点击关闭时触发
+		close.click(function() {
+			//隐藏弹出层，还原弹出层的位置
+			popWindow.hide().animate({
+				'left' : '0px',
+				'top' : '0px'
+			}, 0);
+			//将遮罩层代码从页面中删除
+			$(".maskDiv").remove();
+		});
+	});
+</script>
+</head>
+<body style="width:2000px">
+	<br />
+	<a href="javascript:;" id="show">显示窗口</a>
+ 
+	<div class="popWindow hide">
+		<h3>
+			弹出窗口的标题<span>关闭</span>
+		</h3>
+		<div class="content" id="content">弹出窗口的内容</div>
+	</div>
+</body>
+</html>

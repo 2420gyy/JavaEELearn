@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">{{message}}
+		<h2>{{message}}</h2>
+		</div>
+		<div id="app-4">
+			<ol>
+				<li v-for="todo in todos">
+					{{todo.text}}
+				</li>
+			</ol>
+		</div>
+		<div id="app-3">
+			<ul>
+				<li v-for="item in movies">{{item}}</li>
+			</ul>
+		</div>
+		<script src="../js/vue.js"></script>
+		<script>
+			let app = new Vue({
+				el:"#app",//用于挂载要管理的元素
+				data:{
+					message:'你好啊，李银河！'
+				}
+			})
+			
+			var app4 =new Vue({
+				el:"#app-4",
+				data:{
+					todos:[
+						{ text: '学习 JavaScript' },
+						{ text: '学习 Vue' },
+						{ text: '整个牛项目' }
+					]
+				}
+			})
+			var app3 =new Vue({
+				el:"#app-3",
+				data:{
+					movies:['a','b']
+				}
+			})
+		</script>
+	</body>
+</html>

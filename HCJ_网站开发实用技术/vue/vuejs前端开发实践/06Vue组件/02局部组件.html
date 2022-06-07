@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+	<div id="app">
+		<h2>{{message}}</h2>
+		<bottom></bottom>
+	</div>
+	<script src="../vue.js"></script>
+	<script>
+		const app = new Vue({
+			el:"#app",
+			data:{
+			message:"Hello,xiaoli"	
+			},
+			components:{
+				// 这里可以用''包裹，也可以省略
+				bottom:{
+					template:`<h2>这是局部组件{{count}}</h2>`,
+					data() {
+						return{
+							// 0开头的八进制
+							count:021
+						}
+					}
+				}
+			},
+			methods:{}
+				
+		})
+	</script>
+	</body>
+</html>

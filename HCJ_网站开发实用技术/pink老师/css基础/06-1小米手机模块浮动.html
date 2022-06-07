@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				height: 615px;
+				width: 1226px;
+				background-color: pink;
+				margin: 0 auto;
+			}
+			.left{
+				width: 234px;
+				height: 615px;
+				background-color: purple;
+				float: left;	
+			}
+			.right{
+				width: 992px;
+				height: 615px;
+				background-color: skyblue;
+				float: right;
+			}
+			/* > 亲儿子 */
+			/* 块元素纵向排列找标准流，横向排列找浮动 */
+			.right>div{
+				float: left;
+				height: 300px;
+				width:234px;
+				background-color: #007BFF;
+				margin-left: 14px;
+				margin-bottom: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="left">
+				左
+			</div>
+			<div class="right">
+				<div>1</div>
+				<div>1</div>
+				<div>1</div>
+				<div>1</div>
+				<div>1</div>
+				<div>1</div>
+				<div>1</div>
+				<div>1</div>
+			</div>
+		</div>
+	</body>
+</html>

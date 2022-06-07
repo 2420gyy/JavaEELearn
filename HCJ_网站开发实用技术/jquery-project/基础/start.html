@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//$是函数名称
+			//公式 ： $(selector).action()
+			function $(obj){
+				return document.getElementById(obj);
+				}
+			function fun1(){
+				//var obj = document.getElementById("text1");
+				var obj = $("text1");
+				alert(obj.value);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="text1" value="我是text1" /><br />
+		<input type="text" id="text2" value="我是text2" /><br />
+		<input type="button" value="单机按钮" onclick="fun1()"/>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.bgc{
+			height: 480px;
+			width: 850px;
+			border: 1px solid #808080;
+			background-image: url(resources/MOUNTAIN.JPG);
+			/* 平铺（可以选择只平铺上面） */
+			background-repeat: no-repeat;
+			/* 宽 高 */
+			background-size: 425px 240px;
+			/* 若只指定了一个方位名词，另一个值省略，则第二个值默认居中对齐。 */
+			background-position: center ;
+			/* 是否随页面滚动 scroll | fixed */
+			background-attachment: scroll;
+		}
+		.bgc a{
+			/* 变为行内块元素 既可以设置宽高，又在一行 */
+			display: inline-block;
+			height: 60px;
+			width: 140px;
+			background-color: pink;
+			text-align: center;
+			line-height: 60px;
+			color: #F5F5F5;
+			text-decoration: none;
+			/* 必须加  */
+			/* background: url(resources/mmexport1586672426611.jpg) no-repeat; */
+			background-image: url(./resources/mmexport1586672426611.jpg);
+		}
+		a:hover{
+			background-image: url(./resources/MOUNTAIN.JPG);
+		}
+	</style>
+	<body>
+		<!-- <div style="height: 480px;width: 850px;">
+			<img src="./resources/MOUNTAIN.JPG" style="height: 480px;width: 850px;"/>
+		</div> -->
+		<div class="bgc">
+			<a href="#" id="aa">五彩导航</a>
+			<a href="#" id="aa">五彩导航</a>
+			<a href="#" id="aa">五彩导航</a>
+			<a href="#" id="aa">五彩导航</a>
+	</body>
+</html>

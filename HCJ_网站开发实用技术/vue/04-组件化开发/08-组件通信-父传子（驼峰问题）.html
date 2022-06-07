@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+	<div id="app">
+		<h2>{{message}}</h2>
+		<!-- 这里不支持驼峰 -->
+		<cpn :c-info='info'></cpn>
+	</div>
+	<template id="cpn">
+		<div>
+			<h2>{{cInfo}}</h2>
+		</div>
+	</template>
+	<script src="../js/vue.js"></script>
+	<script>
+		const cpn ={
+			template:'#cpn',
+			props:{
+				cInfo:{
+					type:Object,
+					default(){
+						return {
+							cInfo:'父对象没有值'
+						}
+				}
+			}
+		}
+		}
+		const app = new Vue({
+			el:"#app",
+			data:{
+			message:"Hello,xiaoli",
+			info:{
+				name:'xiaoming',
+				age:18
+			}
+			},
+			components:{
+				cpn
+			}
+		})
+	</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+	<div id="app">
+		<h2>{{message}}</h2>
+		<button v-on:click="counter += 1">加一</button>
+		<button @click="add">加一</button>
+		<p>按钮单击了{{counter}}次</p>
+		<button @click="sayHello('vue')">问好</button>
+		<p>Hello {{str}}</p>
+	</div>
+	<script src="../vue.js"></script>
+	<script>
+		const app = new Vue({
+			el:"#app",
+			data:{
+			message:"Hello,xiaoli",
+			counter:0,
+			str:''
+			},
+			methods:{
+				add:function(e){
+				this.counter++
+				console.log(e.target.innerHTML)
+				},
+				sayHello:function(name){
+					this.str=name
+				}
+			}
+		})
+	</script>
+	</body>
+</html>

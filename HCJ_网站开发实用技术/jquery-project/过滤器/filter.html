@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		</style>
+		<!-- 
+		 $("div:first")
+		 $("div:last")
+		 $("div:eq(数组下标)")
+		 $("div:lt(下标)")
+		 $("div:gt(下标)") 获取大于下标的dom元素
+		 -->
+		<script type="text/javascript" src="../jquery-3.5.1.js"></script>
+		<script type="text/javascript">
+			function fun31(){
+				var $obj = $("div:last");
+				$obj.css("background","red");
+				alert($obj.value);//节点
+			}
+			
+			$(function(){
+				//当页面dom对象加载后，给对象绑定事件
+				$("#btn4").click(function(){
+					alert("点击了按钮");
+					var obj2 = $("div:first");
+					alert(obj2.text());
+					//获得值使用.text() 还有html()方法
+					alert(obj2.value);
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="filter1" value="111">1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<input type="button" id="btn2" value="点击" onclick="fun31()" />
+		<input type="button" id="btn4" value="事件绑定" />
+	</body>
+</html>

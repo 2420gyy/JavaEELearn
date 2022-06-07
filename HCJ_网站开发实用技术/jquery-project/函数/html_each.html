@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		</style>
+		<script type="text/javascript" src="../jquery-3.5.1.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn5").click(function(){
+					alert($("span").html());
+					// 获得的时候是只有第一个dom对象，设置值时是设置全部的dom
+				})
+				//each 可以对数组，json，dom数组循环处理
+				//语法：$.each(循环的内容，处理的函数) 每个数组成员都会执行后面的函数一次
+				// function(index,emelent)
+				//循环的索引，数组中的成员
+				$("#btn6").click(function(){
+					var arr = [1,2,3];
+					$.each(arr,function(index,element){
+						alert("循环的索引:"+index+"数组中的成员:"+element);
+					})
+				})
+				//each 循环json
+				$("#btn7").click(function(){
+					var json ={"name":"zhansan","age":13};
+					$.each(json,function(i,ele){
+						alert(i+"="+ele);
+					})
+				})
+				//each循环dom对象
+				$("#btn8").click(function(){
+					var obj = $(":text");
+					$.each(obj,function(i,n){
+						//n是dom对象。获取value属性
+						alert(i+"="+n.value);
+					})
+				})
+				//each循环jquery对象(等价上面的)
+				$("#btn9").click(function(){
+					$(":text").each(function(i,n){
+						alert("i="+i+" n="+n.value);
+					})
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<span>这是<strong>html()的使用</strong></span><br />
+		<span>下一<b>行</b></span><br />
+		<input type="text" value="刘备" /><br />
+		<input type="text" value="张飞" /><br />
+		<input type="text" value="关羽" /><br />
+		<input type="button" value="html的使用" id="btn5"/><br />
+		<input type="button" value="循环普通数组" id="btn6"/><br />
+		<input type="button" value="循环json" id="btn7"/><br />
+		<input type="button" value="循环dom对象" id="btn8"/><br />
+		<input type="button" value="循环jquery对象" id="btn9"/>
+	</body>
+</html>

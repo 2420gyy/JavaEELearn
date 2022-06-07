@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+		<div id="app6">
+			<!-- 
+			 这里使用lable和span-->
+			 <!-- 
+				这里有组件复用的问题。虚拟dom
+				key作为唯一标识
+			  -->
+			<div v-if="isChange">
+			用户账号:<input type="text" placeholder="用户账号" key="a"/>
+			</div>
+			<div v-else>
+			邮箱账号:<input type="text" placeholder="邮箱账号" key="b"/>
+			</div>
+			<!-- <button @click="btn(isChange)">切换类型</button> -->
+			<!-- <button @click="btn">切换类型</button> -->
+			<button @click="isChange = !isChange">切换类型</button>
+		</div>
+
+	<script src="../js/vue.js"></script>
+	<script>
+		const app = new Vue({
+			el:"#app6",
+			data:{
+				isChange:true
+			},
+			methods:{
+				btn(){
+					// this.isChange=!obj
+					this.isChange=!this.isChange
+				}
+			}
+		})
+	</script>
+	</body>
+</html>

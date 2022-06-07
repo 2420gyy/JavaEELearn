@@ -1,0 +1,42 @@
+.popWindow{  
+      
+    width:500px;/* 设置弹出窗口的宽度 */  
+    height:500px;/* 设置弹出窗口的高度 */  
+    background-color: buttonface;  
+    left:0px;  
+    top:0px;  
+    position: absolute;/* 设置弹出窗口为绝对定位，这样后面设置位置才会起效 */  
+    z-index: 2;  
+}  
+.popWindow h3{/* 设置弹出窗口的标题栏的样式 */  
+    height:30px;  
+    line-height:30px;  
+    margin:0;  
+    padding:0;  
+}  
+.hide{/* 隐藏 弹出窗口DIV*/  
+    display: none;  
+}  
+.popWindow h3 span{  
+    float: right;  
+    font-size: 14px;  
+    font-weight:bold;  
+    cursor: pointer;  
+    margin-right: 5px;  
+}  
+.popWindow h3 span:HOVER{  
+    color: red;  
+}  
+.popWindow .popWindowcontent{  
+    height: 470px;  
+    background-color:white;  
+}  
+/* 设置遮罩层的样式，如果在这里设置则js中设置css样式部分可以省去 */  
+.maskDiv{  
+    background-color: black;  
+    opacity:0.4;  
+    position: absolute;  
+    top: 0px;  
+    left: 0px;  
+    z-index: 1;  
+}

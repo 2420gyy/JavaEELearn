@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+	<div id="app">
+		<ul>
+			<li v-for="item in letters" :key="item">{{item}}</li>
+		</ul>
+		<button @click="btn">按钮</button>
+	</div>
+	<script src="../js/vue.js"></script>
+	<script>
+		const app = new Vue({
+			el:"#app",
+			data:{
+			message:"你好",
+			letters:['a','b','c','d']
+			},
+			methods:{
+				btn(){
+					// 增加 可以传多个值
+					// this.letters.push('aaa','bbb'); 
+					// this.letters.pop()
+					// this.letters.shift()
+					// this.letters.unshift('aaa')
+					//splice()
+					//删除：（start，删除几个元素）
+					//替换：（start，end，替换的元素）
+					//插入：（1，0，追加的元素）
+					// this.letters.splice(1,0,'e')
+					
+					// this.letters.sort()
+					// this.letters.reverse()
+					
+					//set(要修改的对象，索引值，修改后的值)
+					// Vue.set(this.letters,0,"bbb");
+					
+					//非响应式
+					// this.letters[0]='aaa';
+				}
+			}
+		})
+	</script>
+	</body>
+</html>

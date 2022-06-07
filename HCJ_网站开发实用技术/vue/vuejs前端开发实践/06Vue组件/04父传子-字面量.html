@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+	<div id="app">
+		<child msg="你好"></child>
+	</div>
+	<template id="ch">
+		<div>
+			<h2>{{msg}}</h2>
+		</div>
+	</template>
+	<script src="../vue.js"></script>
+	<script>
+		Vue.component("child",{
+			template:'#ch',
+			props:['msg']
+		})
+		
+		const app = new Vue({
+			el:"#app"
+		})
+	</script>
+	</body>
+</html>

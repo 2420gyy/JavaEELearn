@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.active{
+				color: #FF0000;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="app-4">
+		<ul>
+			<li v-for="(m,index) in movies" :class="{'active':cuerys==index}" 
+			@click="btn(index)">{{index}}-{{m}}</li>
+		</ul>
+	</div>
+	<script src="../js/vue.js"></script>
+		<script>
+			const app = new Vue({
+				el:"#app-4",
+				data:{
+				cuerys:0,
+				movies:['海绵宝宝','火影忍者',"进击的巨人"]
+				},
+				methods:{
+					btn:function(obj){
+						this.cuerys = obj;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

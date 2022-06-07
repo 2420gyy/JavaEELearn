@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			new Promise((resolve,reject)=>{
+				setTimeout(() =>{
+					// resolve("hello world")
+					reject("Error data")
+					// console.log("hello world")
+				},1000)
+			}).then(data=>{
+				console.log(data);
+			},(err)=>{
+				console.log(err);
+			})
+		</script>
+	</body>
+</html>

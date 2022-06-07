@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		</style>
+		<script type="text/javascript" src="../jquery-3.5.1.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn11").click(function(){
+					var obj = $(":text:enabled");
+					obj.val("hello");
+					//带参时，是dom对象的value值
+				})
+				$("#btn22").click(function(){
+					var obj = $(":checkbox:checked");
+					for(var i=0;i<obj.length;i++){
+						alert(obj[i].value);	
+					}
+				})
+				$("#btn33").click(function(){
+					var obj = $("select>option:selected");
+					alert(obj.val());//获取的是value的值
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<!-- 
+		 根据表单中dom对象的状态情况，定位dom对象
+		 启用状态：enabled
+		 不可用状态：disabled
+		 选择状态:checked
+		 选择指定下拉列表的被选中元素 选择器>option:selected
+		 -->
+		 <p>文本框</p>
+		 <input type="text" id="text11" value="text1"/><br />
+		 <input type="text" id="text22" value="text2" disabled /><br />
+		 <input type="text" id="text33" value="text3"/><br />
+		 <input type="text" id="text44" value="text4" disabled="true" /><br />
+		 <p>复选框</p>
+		 <input type="checkbox" id="cb1" value="游泳" />游泳<br />
+		 <input type="checkbox" id="cb2" value="健身" checked="checked"/>健身<br />
+		 <input type="checkbox" id="cb3" value="跑步" />跑步<br />
+		 <p>下拉选择框</p>
+		 <select id="lang">
+			 <option value="java">java语言</option>
+			 <option value="go" selected="selected">go语言</option>
+			 <option value="sql">sql语言</option>
+		 </select><br /><br />
+		 <button id="btn11">所有可用的text设值为hello</button><br />
+		 <button id="btn22">显示被选中的复选框的值</button><br />
+		 <button id="btn33">显示下拉列表选中的值</button>
+	</body>
+</html>

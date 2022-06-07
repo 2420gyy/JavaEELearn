@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../bootstrap测试/bs4/jquery-3.5.1.js"></script>
+	</head>
+	<body>
+		<div id="aa">
+			<form name="punchout_form" method="post" action="https://openapi.alipaydev.com/gateway.do?charset=UTf-8&method=alipay.trade.page.pay&sign=g9c%2FniTOR98HagebxuPWXQP8spaK6haVfYrviky6PoRFjy6b6rmB7NdTtvNRtY9eUMlbAYA%2BBjv2Pn2h3DbAs09npQSVlWKVzwlNIlY5ttvnXezossFOnvk8Nao1UrCsI%2B8PJ2aTm3i0EIsCP7ZHHpqCPl8J%2Fzn9njlzUhnfgxfnY%2FaR9bx%2BZEzwVOVoklXeUeofRSrwVK66nKVvP7aEwjfKL6ItN8ZlrBR0XPnmofACzuMZbVWohhcVvvXtonJS5roDsl3w2s06W7SpjtHEoB7xIEZgZIL8lWs805r15niHixlZ%2BRaMFCm2aqVxkoQC6rftpRTdYism9GM4r9V9TA%3D%3D&return_url=http%3A%2F%2Flocalhost%3A8800%2Freturn&notify_url=http%3A%2F%2Flocalhost%3A8800%2Fnotify&version=1.0&app_id=2021000118661222&sign_type=RSA2&timestamp=2022-04-29+11%3A27%3A21&alipay_sdk=alipay-sdk-java-dynamicVersionNo&format=json">
+			<input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;d41d1b90-2902-42d8-8b74-ebd6c1629717&quot;,&quot;total_amount&quot;:&quot;12&quot;,&quot;subject&quot;:&quot;csasd&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
+			<input type="submit" value="立即支付" style="display:none" >
+			</form>
+			<script>document.forms[0].submit();</script>
+		</div>
+	</body>
+</html>

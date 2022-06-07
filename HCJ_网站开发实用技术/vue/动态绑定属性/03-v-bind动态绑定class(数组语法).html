@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<div id="app-6">
+		<!-- 注意单引号，这个不常用 -->
+		<h2 :class="[active,line]">{{message}}</h2>
+	</div>
+	<body>
+		<script src="../js/vue.js"></script>
+		<script>
+			const app = new Vue({
+				el:"#app-6",
+				data:{
+				message:'你好',
+				active:'aaa',
+				line:'bbb'
+				}
+				
+			})
+		</script>
+	</body>
+</html>

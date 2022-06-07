@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="bs4/jquery-3.5.1.js"></script>
+		<script src="bs4/js/bootstrap.min.js"></script>
+		<link href="bs4/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="accordion" id="accordionExample">
+		  <div class="card">
+		    <div class="card-header" id="headingOne">
+		      <h2 class="mb-0">
+		        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		          Collapsible Group Item #1
+		        </button>
+		      </h2>
+		    </div>
+		
+		    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+		      <div class="card-body">
+		        Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
+		      </div>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <div class="card-header" id="headingTwo">
+		      <h2 class="mb-0">
+		        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		          Collapsible Group Item #2
+		        </button>
+		      </h2>
+		    </div>
+		    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+		      <div class="card-body">
+		        Some placeholder content for the second accordion panel. This panel is hidden by default.
+		      </div>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <div class="card-header" id="headingThree">
+		      <h2 class="mb-0">
+		        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		          Collapsible Group Item #3
+		        </button>
+		      </h2>
+		    </div>
+		    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+		      <div class="card-body">
+						
+						<ul class="child-tree child-wrap hide" style="display: block;">
+							
+						<li class="item ">
+						<div class="  category-content-1 ">
+						<div class="model-name" data-id="4256" data-parent="21">
+						<a href="/help/articles/4256">
+						<i class="icon-file iconfont"></i>
+						<span class="">
+						Git 只读文件支持
+						</span>
+						</a>
+						</div>
+						</div>
+						</li>	
+						
+						</ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</body>
+</html>

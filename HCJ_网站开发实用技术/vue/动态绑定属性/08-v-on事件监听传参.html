@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	</style>
+	<body>
+		<div id="app-8">
+		<button>按钮1</button>
+		<button v-on:click="btn2">按钮2</button>
+		<button @click="btn3('abc', $event)">按钮3</button>
+		<!-- 'abc'形式->字符串变量
+			  abc 在data里面找
+			  $event 浏览器产生的event事件
+		 -->
+		</div>
+		<!-- 
+		函数需要参数但是没有传，undefined
+		需要参数，1.btn2() undefined 2.btn2 MouseEvent vue会默认将浏览器
+		产生的event事件对象作为参数传入到方法
+		 -->
+	<script src="../js/vue.js"></script>
+		<script>
+			const app = new Vue({
+				el:"#app-8",
+				data:{
+					abc:123
+				},
+				methods:{
+					btn2(event){
+						console.log(event);
+					},
+					btn3(abc,event){
+						alert("---"+abc+event);
+						console.log("---",abc,event);
+						// 为什么可以console.log，但是alert没有显示，
+						//必须用+连接
+				}
+			}
+		})
+		</script>
+	</body>
+</html>

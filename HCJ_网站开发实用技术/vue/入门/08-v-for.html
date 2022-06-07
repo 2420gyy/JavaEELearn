@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+		<div id="app-08">
+			<ul>
+				<li v-for="(name,index) in names">{{index+1}}{{name}}</li>
+			</ul>
+			<ul>
+				<!-- 这里不是下标0，1，2 而是key -->
+				<li v-for="m in info">{{m}}</li>
+				<li v-for="(m,n) in info">{{n}}</li>
+			</ul>
+		</div>
+		<!-- 
+		 key是为了高效的更新dom
+		 -->
+	<script src="../js/vue.js"></script>
+	<script>
+		const app = new Vue({
+			el:"#app-08",
+			data:{
+				names:['james','kobe','carry'],
+				info:{
+					age:18,
+					name:'why',
+					height:1.8
+				}
+			}
+		})
+	</script>
+	</body>
+</html>

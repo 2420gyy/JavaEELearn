@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	</style>
+	<body>
+	<div id="app">
+		<cpnf></cpnf>
+	</div>
+	
+	<script src="../js/vue.js"></script>
+	<script>
+
+		const app = new Vue({
+			el:"#app",
+			components:{
+				'cpnf':{
+					// 注意！！！绑定数据的位置？？？？
+						template:`
+						<div>
+							<h2>这里是父组件</h2>
+							<h2>父组件</h2>
+							<cpn1 :cmessage="message"></cpn1>
+							<h2>父组件</h2>
+						</div>`
+						,
+						data:function(){
+							return{
+								message:"Hello,xiaoli"
+							}
+						},
+						components:{
+							cpn1:{
+								template:`
+								<div>
+								<h2>子组件</h2>
+									<p>{{cmessage}}</p>
+								</div>
+								`,
+								props:{
+									cmessage:{
+										type:String,
+										default:'父对象没有值'
+									}
+								}
+							}
+						}
+				}
+			}
+		})
+	</script>
+	</body>
+</html>

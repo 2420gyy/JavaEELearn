@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="application/javascript">
+			// 只有一个参数或一条return语句 省略括号或return
+			let sun = num1=>num1;
+			//返回对象时必须在对象外面加上括号
+			let stu=()=>({id:001,name:'tom'})
+			//注意 
+			//函数体内的this对象就是定义时所在的对象，而不是使用时所在的对象
+			document.onclick=function(){
+				setTimeout(function(){console.log(this);},1000)
+			}//setTimeout通过Windows对象调用
+			
+			document.onclick=function(){
+				setTimeout(()=>{
+					console.log(this);
+					},1000)
+			}//箭头函数在document中定义
+			var fruit = new Array("苹果", "梨子", "橘子");
+			
+			document.write("<LI>", fruit.join());
+			document.write("<LI>", fruit.join("、"));
+			document.write("<LI>", fruit.toString());
+			document.write("<LI>", fruit.reverse().join());
+			document.write("<LI>", fruit.valueOf());
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

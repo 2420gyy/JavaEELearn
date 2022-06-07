@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript">
+		const nums = [10,20,30,40,50,60]
+		let total1 = nums.filter(n => n<100).map(n => n*2).reduce((pre,n)=> pre+n)
+		// filter必须返回一个boolean值
+		//true时加入到新的数组，false过滤掉
+		let newNums = nums.filter(function(n){
+			return 20<n
+		})
+		//对数组中的元素做相同的操作
+		let newNums1 =  newNums.map(function(n){
+			return n*2
+		})
+		//两个参数，第一个参数是函数
+		let total = newNums1.reduce(function(preValue,n){
+			return preValue+n
+		},0)
+		console.log(total1);
+	</script>
+	<body>
+		
+	<script src=""></script>
+	</body>
+</html>

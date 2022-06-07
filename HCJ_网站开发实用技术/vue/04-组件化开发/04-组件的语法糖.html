@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+	<div id="app">
+		<cpn4></cpn4>
+		<cpn41></cpn41>
+		<cpn42></cpn42>
+	</div>
+	<script src="../js/vue.js"></script>
+	<script>
+		//创建组件构造器，注册组件
+		const cpnC4=Vue.extend({
+			template:`
+			<div>
+				<p>文章</p>
+			</div>
+			`
+		})
+		Vue.component('cpn4',cpnC4)
+		// 语法糖写法
+		Vue.component('cpn41',{
+			template:`
+			<div>
+				<p>文章-全局组件</p>
+			</div>
+			`
+		})
+		const app = new Vue({
+			el:"#app",
+			data:{
+			message:"Hello,xiaoli"	
+			},
+			components:{
+				cpn42:{
+				template:`
+				<div>
+					<p>文章-局部组件</p>
+				</div>
+				`	
+				},
+			}
+		})
+	</script>
+	</body>
+</html>

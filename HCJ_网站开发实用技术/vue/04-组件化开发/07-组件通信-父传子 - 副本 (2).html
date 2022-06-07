@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+	<div id="app">
+		<cpnf v-bind:cmovies="movies" :cmessage="message"></cpnf>
+	</div>
+
+	<script src="../js/vue.js"></script>
+	<script>
+		const app = new Vue({
+			el:"#app",
+			data:{
+			message:"Hello,xiaoli",
+			movies:['海王','海贼王','火影忍者']
+			},
+			components:{
+				'cpnf':{
+					template:`
+					<div>
+						<h3>这里是子组件h3</h3>
+						<li v-for="movie in cmovies">{{movie}}</li>
+						<p>{{cmessage}}</p>
+					</div>
+					`,
+					props:{
+						cmovies:Array,
+						cmessage:{
+							type:String,
+							default:'父对象没有值'
+						}
+					}
+				}
+			}
+		})
+	</script>
+	</body>
+</html>

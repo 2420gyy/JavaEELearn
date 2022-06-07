@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+	<div id="app">
+		<h2>{{message}}</h2>
+		<button v-on:click="increase">增加</button>
+		{{num}}
+		<button onclick="decrease()">减少</button>
+		<button onclick="offDecrease()">解除减少操作事件</button>
+	</div>
+	<script src="../vue.js"></script>
+	<script>
+		const app = new Vue({
+			el:"#app",
+			data:{
+			message:"Hello,xiaoli"	,
+			num:100
+			},
+			methods:{
+				increase(){
+					this.num++;
+				}
+			}
+		});
+		// $once 定义只触发一次的事件
+		app.$once("reduce",function(step){
+			app.num-=step;
+		});
+		// .$on 定义事件
+		app.$on("reduce",function(step){
+			app.num-=step;
+		});
+		// .$emit 触发事件
+		function decrease(){
+			app.$emit("reduce",2);
+		}
+		// .$off 解除事件，decrease()奖不再执行
+		function offDecrease(){
+			app.$off("reduce");
+		}
+	</script>
+	</body>
+</html>

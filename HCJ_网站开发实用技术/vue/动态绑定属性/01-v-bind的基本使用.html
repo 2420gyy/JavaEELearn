@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<div id="app-1">
+		<h3>{{message}}</h3>
+		<img :src="imgURL" alt=""/>
+		<a v-bind:href="aHref">百度一下</a>
+		<!-- 绑定属性 -->
+		<!-- 语法糖 ： -->
+	</div>
+	<body>
+		<script src="../js/vue.js"></script>
+		<script>
+			const app = new Vue({
+				el:"#app-1",
+				data:{
+				message:'haha',
+				imgURL:'http://www.vue5.com/upload/spring/images/spring.jpg',
+				aHref:'http://www.baidu.com'
+				}
+			})
+		</script>
+	</body>
+</html>

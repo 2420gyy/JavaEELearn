@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="jquery-3.5.1.js"></script>
+		<script type="text/javascript">
+			function btnClick(){
+				var obj = $("#txt2")[0];
+				var num = obj.value;
+				obj.value = num * num;
+				// document.getElementById("txt2").innerText = obj*obj;
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txt2" value="整数"  /><br>
+		<input type="button" value="计算" onclick="btnClick()" />
+	</body>
+</html>

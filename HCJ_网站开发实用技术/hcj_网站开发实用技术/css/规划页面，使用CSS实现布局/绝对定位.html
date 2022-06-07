@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#s{
+				width: 45px;
+				height: 45px;
+				/* solid!!!!!!!!!!!!!!! */
+				border: medium red solid; 
+				margin: 10px 0px;
+				z-index: 3;
+			}
+			#st{
+				width: 400px;
+				height: 400px;
+				background-color: #C2C2C2;
+				position: relative;
+				left: 0px;
+				right: 0px;
+				z-index: 2;
+			}
+			#st1{
+				position: absolute;
+				left: 50px;
+				top: 50px;
+				z-index: -3;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 绝对定位以离其最近的有position属性的父对象为起始点 -->
+		<!-- 被定位的元素会挡住其他元素，使用 z-index 值大者在上，可以为负，表示元素在页面下面 -->
+		<div id="s"></div>
+		<div id="st">
+					 <div id="st1"><img src="../../static/image/test1.png"/></div>
+					 <div><img src="../../static/image/test2.png"/></div>
+		</div>
+	</body>
+</html>

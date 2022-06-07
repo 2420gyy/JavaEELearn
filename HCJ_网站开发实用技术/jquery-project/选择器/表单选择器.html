@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		</style>
+		<script type="text/javascript" src="./jquery-3.5.1.js"></script>
+		<script type="text/javascript">
+			function fun21(){
+				var $obj2 = $(":text");
+				alert($obj2.val());
+				}
+			function fun22(){
+				var $obj2 = $(":radio");
+				for(var i=0;i<$obj2.length;i++){
+					var obj = $obj2[i];
+					alert(obj.value);
+				}
+				}	
+		</script>
+	</head>
+	<body>
+		<input type="text" value="text" /><br />
+		<input type="radio" value="男" />男
+		<input type="radio" value="女" />女<br />
+		<input type="button" value="表单选择器(text)" onclick="fun21()" /><br />
+		<input type="button" value="表单选择器(radio)" onclick="fun22()" />
+	</body>
+</html>

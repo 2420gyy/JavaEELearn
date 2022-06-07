@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.active{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="app-5">
+		<!-- <h3 class="active">{{message}}</h3> -->
+		<h2 :class="{active: isActie, line:isLine}">{{message}}</h2>
+		<h2 :class="getClass()">{{message}}</h2>
+		<h2 class="active">{{message}}</h2>
+		<button v-on:click="btn">按钮</button>
+		
+		<div class="radio">
+			<label for="optionsRadios1" >
+				<input type="radio" name="optionsRadios" checked="checked" id="optionsRadios1" value="option1">
+				男
+			</label>
+		</div>
+		<div class="radio">
+			<label for="optionsRadios2">
+				<input type="radio" style="width: 20px;" name="optionsRadios" id="optionsRadios2" value="option2">
+				女
+			</label>
+		</div>
+		
+		
+	</div>
+		<script src="../js/vue.js"></script>
+		<script>
+			const app = new Vue({
+				el:"#app-5",
+				data:{
+				message:'你好',
+				isActie:true,
+				isLine:false,
+				},
+				methods:{
+					btn(){
+						this.isActie=!this.isActie
+					},
+					//当class过于复杂时
+					getClass:function(){
+						return {active: this.isActie, line:this.isLine}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

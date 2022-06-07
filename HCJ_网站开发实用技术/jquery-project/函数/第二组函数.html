@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		</style>
+		<script type="text/javascript" src="../jquery-3.5.1.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#tbtn").click(function(){
+					$("span").remove();
+					$("p").empty();
+					$("div").append("<h3>这是增加的dom</h3>");
+					$("#te").empty();
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<!-- 
+		 remove() 将数组中所有DOM对象及其子对象一并删除
+		 empty() 将数组中所有DOM对象的子对象删除（移除内容，但是父还在），适用select
+		 append 为数组中所有DOM对象添加子对象
+		 html 设置或返回被选元素的内容
+		 -->
+		 <span>这是测试<strong>代码</strong></span><br />
+		 <p>这是测试<strong>代码</strong><h4>这个不在P标签的里面了，换行了</h4></p><br />
+		 <div>增加。。。</div>
+		 <p id="te" style="width: 200px; height: 200px; background-color: aquamarine;">只删除内容<h6>???</h6></p>
+		 <button id="tbtn" >测试</button>
+	</body>
+</html>

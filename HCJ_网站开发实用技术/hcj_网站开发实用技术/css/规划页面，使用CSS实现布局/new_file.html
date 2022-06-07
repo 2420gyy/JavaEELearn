@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#container6{
+				border: 1px solid #000000;
+				display: flex;
+				display: -webkit-box;
+				
+			}
+			/* 			#container6{
+							display: flex;
+							display: -webkit-box;
+				} */
+			#center6,#left6,#right6{
+				border: 1px solid #8A2BE2;
+				margin: 10px;
+			}
+			#right6{
+				background-color: #FFEBCD;
+				-webkit-box-ordinal-group: 1;
+				height: 600px;
+				width: 200px;
+			}
+			#left6{
+				background-color: #5F9EA0;
+				-webkit-box-ordinal-group: 3;
+				height: 600px;
+				width: 200px;
+			}
+			#center6{
+				background-color: #55AAFF;
+				-webkit-box-ordinal-group: 2;
+				height: 600px;
+				flex: 1;
+				min-width: 100px;
+			} 
+
+			
+		</style>
+	</head>
+	<body>
+		<div id="container6">
+			<div id="left6">left</div>			
+			<div id="right6">right</div>
+			<div id="center6">center</div>
+		</div>
+	</body>
+</html>

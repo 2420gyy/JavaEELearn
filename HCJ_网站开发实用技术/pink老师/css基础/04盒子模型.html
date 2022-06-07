@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.header{
+			width: 90%;
+			border: 1px solid gold;
+			height: 40px;
+			margin: 0 auto;
+		}
+		.d1{
+			width: 100px;height: 50px;
+			 border: 1px solid gray;
+		}
+		.d2{
+			width: 50px;height: 25px;
+			 border: 1px solid gray;
+		}
+	</style>
+	<body>
+		<!-- 
+			外边距可以让块级盒子 水平居中
+		 -->
+		<div class="header">
+			头部
+		</div>
+		<!-- 
+		  使行内元素或行内块元素水平居中	()
+			text-align: center;	
+		 -->
+		 <!-- 
+			 相邻元素垂直外边距的合并
+			-->
+		
+		<div style="width: 100px;height: 50px;
+		 border: 1px solid gray;
+		 padding-left: 30px;
+		 padding-top: 10px;
+		 margin-bottom: 20px;
+		 <!-- 
+			边框和内边距的值是包含在 width 内的
+			-->
+		 box-sizing: border-box;
+		 ">
+			测试
+		</div>
+		<div style="width: 200px; height: 50px;
+		 border: 1px solid #FF7F50;
+		 margin-top: 50px;
+		 ">
+			margin
+		</div>
+		<hr>
+		<!-- 
+		 对于两个嵌套关系的块元素，
+		 父元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值。
+		 为父元素添加 overflow:hidden
+		 -->
+		<div class="d1">
+			<div class="d2">
+
+			</div>
+		</div>
+		<!-- 
+		注意：行内元素为了照顾兼容性，
+		尽量只设置左右内外边距，不要设置上下内外边距。但是转换为块级和行内块元素就可以设置。 
+		 -->
+	</body>
+</html>

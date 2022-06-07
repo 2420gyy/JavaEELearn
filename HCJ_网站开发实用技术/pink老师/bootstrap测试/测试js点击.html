@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	<script src="bs4/jquery-3.5.1.js"></script>
+	
+	
+	</head>
+	<body>
+		<div id="tt">
+			div标签
+		</div>
+		<a href="#" id="ttt">a标签</a>
+		
+		
+		<script type="application/javascript">
+				$(function() {
+						console.log('======')
+				    $("#ttt").click(function(){
+							alert("----")
+						});
+				    $('#ttt').trigger("click");
+				});
+			</script>
+	</body>
+</html>

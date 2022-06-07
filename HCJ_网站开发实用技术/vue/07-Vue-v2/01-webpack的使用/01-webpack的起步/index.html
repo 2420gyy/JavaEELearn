@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	<h3>index</h3>
+	<!-- 
+	 使用ES6注意的点：
+	 导出：export{add,mul}
+	 导入：import {add,mul} from './mathUtil.js'
+	 type="module"
+	 -->
+<!-- 	<script src="src/main.js" type="module"></script>
+	<script src="src/mathUtil.js" type="module"></script> -->
+	<!-- 
+	 使用commonjs的模块化规范
+	 导入： const {add,mul} = require('./mathUtil.js')
+	 导出：module.exports ={add,mul}
+	 -->
+	<script src="dist/bundle.js"></script>
+	</body>
+</html>

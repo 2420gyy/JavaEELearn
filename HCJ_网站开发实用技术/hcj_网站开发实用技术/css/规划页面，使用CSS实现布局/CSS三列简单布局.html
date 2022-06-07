@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#container5{
+				display: flex;
+				display: -webkit-box;
+			}
+			#left5{
+				/* 调整顺序 */
+				-webkit-box-ordinal-group: 1;
+				width: 300px;
+				background-color: #666666;
+				height: 300px;
+				
+			}
+			#right5{
+				-webkit-box-ordinal-group: 3;
+				width: 300px;
+				background-color: #8A2BE2;
+				height: 300px;
+			}
+			#center5{
+				min-width: 100px;
+				-webkit-box-ordinal-group: 2;
+				/* 中间自由 */
+				-webkit-box-flex: 1;
+				background-color: #55aaff;
+				height: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container5">
+			
+			<div id="left5">left</div>
+			
+			<div id="right5">right</div>
+			<div id="center5">center</div>
+			
+		
+		</div>
+	</body>
+</html>

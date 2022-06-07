@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+	<div id="app">
+		<!-- 懒加载 按回车才同步-->
+		<input type="text" v-model.lazy="message" />
+		<h2>{{message}}</h2>
+		
+		<!-- number 转换格式-->
+		<input type="number" v-model.number="age" />
+		<h2>{{typeof age}}</h2>
+		
+		<!-- trim 删除空格
+		浏览器会自动删除空格，但是控制台可以取到原始的-->
+		<input type="text" v-model.trim="name"/>
+		<h2>{{name}}</h2>
+	</div>
+	<script src="../js/vue.js"></script>
+	<script>
+		const app = new Vue({
+			el:"#app",
+			data:{
+			message:"Hello,xiaoli",
+			age:0,
+			name:''
+			}
+		})
+	</script>
+	</body>
+</html>

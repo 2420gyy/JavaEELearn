@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	</style>
+	<body>
+	<div id="app">
+		<h2>{{message}}</h2>
+		<p>姓名：<input type="text" v-model="userInfo.name"/></p>
+		<p>邮箱：<input type="text" v-model="userInfo.email"/></p>
+		<!-- 单选：radio 多选：cehckbox -->
+		<p>性别：<input v-model="userInfo.sex" type="radio" value="男" name="sex"/>男</p>
+		<p>性别：<input v-model="userInfo.sex" type="radio" value="女" name="sex"/>女</p>
+		<!-- 控制台直接修改：app.userInfo.sex="女"  -->
+		<p>学习：
+		<select name="edu" v-model="edu">
+			<option value="研究生">研究生</option>
+			<option value="本科">本科</option>
+			<option value="专科">专科</option>
+		</select></p>
+		<p>--------信息同步显示------</p>
+		<p>姓名：{{userInfo.name}}</p>
+		<p>邮箱：{{userInfo.email}}</p>
+		<p>性别：{{userInfo.sex}}</p>
+		<p>学历：{{edu}}</p>
+	</div>
+	<script src="../vue.js"></script>
+	<script>
+		const app = new Vue({
+			el:"#app",
+			data:{
+			message:"Hello,xiaoli",
+			userInfo:{
+				sex:"男",
+				name:'',
+				email:'@'
+			},
+			edu:"本科"
+			}
+		})
+	</script>
+	</body>
+</html>

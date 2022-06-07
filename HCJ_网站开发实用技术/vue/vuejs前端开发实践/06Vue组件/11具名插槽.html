@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+	<div id="app">
+		<h2>{{message}}</h2>
+		<cpn></cpn>
+		<cpn><button slot="left">按钮</button></cpn>
+		<cpn><a href="#" slot="center">百度</a></cpn>
+		<cpn></cpn>
+	</div>
+	<template id="app-11">
+		<div>
+			<slot name="left">左边</slot>
+			<slot name="center">中间</slot>
+			<slot name="right">右边</slot>
+		</div>
+	</template>
+	<script src="../vue.js"></script>
+	<script>
+		const app = new Vue({
+			el:"#app",
+			data:{
+			message:"Hello,xiaoli"	
+			},
+			components:{
+				cpn:{
+					template:"#app-11"
+				}
+			}
+		})
+	</script>
+	</body>
+</html>

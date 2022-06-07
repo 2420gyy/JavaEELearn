@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css"></style>
+	<body>
+	<div id="app">
+		<h2>{{message}}</h2>
+		<!-- 在父组件中用V-on监听子组件事件 -->
+		<cpn v-on:itemclick="cpnClick" ></cpn>
+		<h3 v-text="msg">{{msg}}</h3>
+	</div>
+	
+	<template id="cpn">
+		<div>
+			<button v-for="item in catagories" @click="btnclick(item)">
+			{{item.name}}</button>
+		</div>
+	</template>
+	
+	<script src="../js/vue.js"></script>
+	<script>
+		const cpn={
+			template:'#cpn',
+			// 这里注意是函数
+			data(){
+				return{
+					catagories:[
+						{id:'aaa',name:'热门推荐'},
+						{id:'bbb',name:'手机数码'},
+						{id:'ccc',name:'家电办公'}
+					]
+				}
+			},
+			methods:{
+				btnclick(item){
+					//子组件内部知道点击了谁
+					// console.log(item.id)
+					// 传给父组件，自定义事件;（发出事件，信息）
+					// 这里驼峰有问题
+					this.$emit('itemclick',item)
+				}
+			}
+		}
+		
+		const app = new Vue({
+			el:"#app",
+			data:{
+			message:"Hello,xiaoli",
+			msg:''
+			},
+			components:{
+				cpn
+			},
+			methods:{
+				cpnClick(item){
+					this.msg=item.name;
+					console.log(item.name)
+				}
+			}
+		})
+	</script>
+	</body>
+</html>

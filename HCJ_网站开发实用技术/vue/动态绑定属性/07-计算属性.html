@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<div id="app-7" >
+		<h2>总价：{{totalPrice}}</h2>
+		<h2>{{FullName}}</h2>
+	</div>
+	<body>
+		<script src="../js/vue.js"></script>
+		<script>
+			const app = new Vue({
+				el:"#app-7",
+				data:{
+					books:[{id:001,price:100},
+						   {id:002,price:200},
+						   {id:003,price:300},]
+				},
+				//计算属性 会进行缓存，比methods高效
+				computed:{
+					totalPrice:function(){
+						let result = 0;
+						for(let i=0;i<this.books.length;i++){
+							result+=this.books[i].price;
+						}
+						// for(let i in this.books){
+						// 	result+=this.books[i].price;
+						// }
+						// for(book of this.books){
+						// 	result+=book.price;
+						// }
+						return result;
+					},
+					// // 这个是计算属性的完整写法
+					// 一般没有set方法，作为只读方法
+					FullName:{
+						//这你可以传值进行赋值操作
+						// set:function(newValue){
+						// 	const name = newValue.split(" ");
+						// }
+						get(){
+							return 'lebron james'
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

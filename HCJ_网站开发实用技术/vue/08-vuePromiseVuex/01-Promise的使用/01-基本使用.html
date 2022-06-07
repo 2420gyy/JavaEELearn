@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// setTimeout(() =>{
+			// 	console.log("hello world")
+			// },1000)
+			
+			// 异步操作
+			
+			// 参数是一个函数，两个参数又是函数
+			new Promise((resolve,reject)=>{
+				setTimeout(() =>{
+					resolve("hello world")
+					reject("Error data")
+					// console.log("hello world")
+				},1000)
+			}).then((data)=>{
+				console.log(data);
+				// return new Promise()....嵌套处理,链式编程
+			}).catch((error)=>{
+				console.log(error);
+			})
+		</script>
+	</body>
+</html>

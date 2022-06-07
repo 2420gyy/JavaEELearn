@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+	<div id="app5">
+		<div v-if="isShow">
+			<h3>1</h3>
+			<h3>2</h3>
+			<h3>3</h3>
+			<h3>4</h3>
+		</div>
+		<!-- 复杂逻辑使用computed方式 -->
+			<h3 v-else>不通过</h3>
+	</div>
+
+	<script src="../js/vue.js"></script>
+	<script>
+		const app = new Vue({
+			el:"#app5",
+			data:{
+				isShow:true 
+			}
+		})
+	</script>
+	</body>
+</html>

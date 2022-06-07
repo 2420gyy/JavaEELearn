@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+	<div id="app">
+		{{message}}
+		<h2 id="msg">{{message}}</h2>
+	</div>
+	<script src="../vue.js"></script>
+	<script>
+		const app = new Vue({
+			el:"#app",
+			data:{
+			message:"Vue的生命周期1"	
+			},
+			methods:{
+				show(){console.log("执行methods中定义的show()方法");}
+				},
+				// 在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。
+				//这时 el,data,methods不可用
+				beforeCreate() {
+					console.log('====1.创建前的状态====');
+					console.log("el:"+this.$el);//$el:Vue 实例使用的根 DOM 元素。
+					console.log("data:"+this.$data);
+					console.log("data中的message:"+this.message);
+					this.show();
+					var htmltxt = document.getElementById('msg').innerHTML;
+					console.log('界面上的内容：'+htmltxt);
+				},
+				//在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，property 和方法的运算，watch/event 事件回调。
+				//然而，挂载阶段还没开始，$el property 目前尚不可用。
+				//data,methods都可以使用，但是el还不可用，数据与页面还没有绑定
+				created() {
+					console.log('====2.创建完毕状态====');
+					console.log("el:"+this.$el);//$el:Vue 实例使用的根 DOM 元素。
+					console.log("data:"+this.$data);
+					console.log("data中的message:"+this.message);
+					this.show();
+					var htmltxt = document.getElementById('msg').innerHTML;
+					console.log('界面上的内容：'+htmltxt);
+				},
+				//在挂载开始之前被调用：相关的 render 函数首次被调用。该钩子在服务器端渲染期间不被调用。 
+				//el,data,methods都可用，但是数据与页面还没有绑定
+				beforeMount() {
+					console.log('====3.挂载前状态====');
+					console.log("el:"+this.$el);//$el:Vue 实例使用的根 DOM 元素。
+					console.log("data:"+this.$data);
+					console.log("data中的message:"+this.message);
+					this.show();
+					var htmltxt = document.getElementById('msg').innerHTML;
+					console.log('界面上的内容：'+htmltxt);
+				},
+				//实例被挂载后调用，这时 Vue.createApp({}).mount() 被新创建的 vm.$el 替换了。
+				//如果根实例挂载到了一个文档内的元素上，当 mounted 被调用时 vm.$el 也在文档内。 
+				mounted() {
+					console.log('====4.挂载结束状态====');
+					console.log("el:"+this.$el);//$el:Vue 实例使用的根 DOM 元素。
+					console.log("data:"+this.$data);
+					console.log("data中的message:"+this.message);
+					this.show();
+					var htmltxt = document.getElementById('msg').innerHTML;
+					console.log('界面上的内容：'+htmltxt);
+				},
+				//数据更新时调用，发生在虚拟 DOM 打补丁之前。
+				//这里适合在更新之前访问现有的 DOM，比如手动移除已添加的事件监听器
+				//此时更新数据data和message的值是新的，虚拟dom也渲染成新的，但是页面还没更新
+				beforeUpdate() {
+					console.log('====5.更新前状态====');
+					console.log("el:"+this.$el);//$el:Vue 实例使用的根 DOM 元素。
+					console.log("data:"+this.$data);
+					console.log("data中的message:"+this.message);
+					this.show();
+					var htmltxt = document.getElementById('msg').innerHTML;
+					console.log('界面上的内容：'+htmltxt);
+				},
+				//由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子
+				//此时数据更改才会加载到页面上去
+				updated() {
+					console.log('====6.更新完成状态====');
+					console.log("el:"+this.$el);//$el:Vue 实例使用的根 DOM 元素。
+					console.log("data:"+this.$data);
+					console.log("data中的message:"+this.message);
+					this.show();
+					var htmltxt = document.getElementById('msg').innerHTML;
+					console.log('界面上的内容：'+htmltxt);
+				},
+				//实例销毁之前调用。在这一步，实例仍然完全可用。 
+				beforeDestroy() {
+					console.log('====7.销毁前状态====');
+					this.message="hello world";
+					console.log("el:"+this.$el);//$el:Vue 实例使用的根 DOM 元素。
+					console.log("data:"+this.$data);
+					console.log("data中的message:"+this.message);
+					this.show();
+					var htmltxt = document.getElementById('msg').innerHTML;
+					console.log('界面上的内容：'+htmltxt);
+				},
+				//Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，
+				//所有的事件监听器会被移除，所有的子实例也会被销毁。
+				//更改值并没有作用到页面上，此时实例关联的数据都会解绑，实例不在作用于DOM
+				destroyed() {
+					console.log('====8.销毁完成状态====');
+					this.message="hello vue";
+					console.log("el:"+this.$el);//$el:Vue 实例使用的根 DOM 元素。
+					console.log("data:"+this.$data);
+					console.log("data中的message:"+this.message);
+					this.show();
+					var htmltxt = document.getElementById('msg').innerHTML;
+					console.log('界面上的内容：'+htmltxt);
+				}
+				//输入app.$destroy()调用
+		})
+	</script>
+	<!-- 
+	 //如果你希望等到整个视图都渲染完毕，可以用 vm.$nextTick 替换掉 mounted：
+	 mounted() {
+	   this.$nextTick(function () {
+	     // 仅在渲染整个视图之后运行的代码
+	   })
+	 }
+	 -->
+	</body>
+</html>

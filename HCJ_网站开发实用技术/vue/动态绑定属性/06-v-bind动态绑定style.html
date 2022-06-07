@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<!-- 
+		 绑定元素！！！！！！S
+		 # ！！！！！！！！！
+		 'font-size' 驼峰不用打引号
+		 数组是一样的，用的少
+		 -->
+		<div id="app-6">
+			<p :style="{'font-size': findlySize,color:red}">{{message}}</p>
+		</div>
+		<script src="../js/vue.js"></script>
+		<script>
+			const app = new Vue({
+				el:"#app-6",
+				data:{
+				message:'你好',
+				findlySize:'50px',
+				red:'red'
+				}
+			})
+		</script>
+	</body>
+</html>

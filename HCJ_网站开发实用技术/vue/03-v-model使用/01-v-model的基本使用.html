@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+
+	</style>
+	<body>
+	<div id="app">
+		<!-- 双向绑定 -->
+		<!-- 可以通过:value & @input 实现 -->
+		<!-- 省略参数时，传入event    v-on: == @  -->
+		<input type="text" :value="message" v-on:input="change"/>
+		<input type="text" :value="message" @input="message = $event.target.value"/>
+		<input type="text" v-model="message" >
+		{{message}}
+	</div>
+	<script src="../js/vue.js"></script>
+	<script>
+		const app = new Vue({
+			el:"#app",
+			data:{
+			message:"你好"	
+			},
+			methods:{
+				change(event){
+					this.message=event.target.value
+				}
+			}
+		})
+	</script>
+	</body>
+</html>

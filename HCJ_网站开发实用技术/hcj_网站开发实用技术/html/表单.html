@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form name="f1" method="get" action="超链接.html">
+			<!-- checkbox 复选框
+				 radio 单选框
+				 button 标准按钮
+				 reset 重置按钮
+			 -->
+			<!-- <input name="控件名称" type="控件类型" /> -->
+			用户名:<input name="username" type="text"value="默认值" /><br />
+			密&nbsp;&nbsp;&nbsp;码:<input name="password" type="password" maxlength="16" />
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;
+				<input name="submit" type="submit" value="提交" />&nbsp;&nbsp;&nbsp;&nbsp;
+				<input name="reset" type="reset" value="重置" />
+			</p>
+		</form>
+		<form>
+			<!-- 列表框标记
+				 size 当size未指定值或设置为1时，控件为下拉列表效果
+			 -->
+			<select name="menu1" size="2">
+				<option value="1">旅游须知</option>
+				<option value="2">旅游景点</option>
+			</select>
+		</form>
+		<p>滑动条</p>
+		<!-- 滑动条range -->
+		<input type="range" min="0" max="100" value="20"  />
+		
+		<!-- 日期选择器  month只能选择月份-->
+		<form>
+			请选择日期: <input naem="user_date" type="date" />
+		</form>
+		<!-- input 可以检查url和email类型的输入-->
+	</body>
+</html>
